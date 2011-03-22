@@ -29,5 +29,4 @@ $lang['New name'] = 'Neuer Name';
 $lang['Modify'] = 'Modifizieren';
 $lang['You should select only one Typetag to edit.'] = 'Sie sollten nur einen zu bearbeitenden Typetag auswählen.';
 
-
 ?>
