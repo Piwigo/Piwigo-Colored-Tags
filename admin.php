@@ -218,7 +218,7 @@ elseif (isset($_POST['dissociate']) and !is_adviser())
 // |                             template init                             |
 // +-----------------------------------------------------------------------+
 
-$template->set_filenames(array('plugin_admin_content' => dirname(__FILE__) . '/typetags_admin.tpl'));
+$template->set_filenames(array('plugin_admin_content' => dirname(__FILE__) . '/admin/typetags_admin.tpl'));
 
 //Recupere les tags associés
 $query = '

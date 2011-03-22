@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: TypeT@gs
-Version: 2.0.d
+Version: 2.2.0
 Description: Allow to manage color of tags, as you want...
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=166
-Author: Sakkhho & P@t
+Author: Sakkhho & P@t & Mistic
 */
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
@@ -19,7 +19,8 @@ function typetags_admin_menu($menu)
 {
   array_push($menu, array(
     'NAME' => 'TypeT@gs',
-    'URL' => get_admin_plugin_menu_link(typetags_PATH . 'admin/typetags_admin.php')));
+    'URL' => get_root_url().'admin.php?page=plugin-' . typetags_DIR,
+  ));
   return $menu;
 }
 

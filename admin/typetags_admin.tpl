@@ -1,11 +1,13 @@
-{html_head}<link rel="stylesheet" type="text/css" href="{$ROOT_URL|@cat:"plugins/typetags/admin/farbtastic/farbtastic.css"}">{/html_head}
-{known_script id="farbtastic" src=$ROOT_URL|@cat:"plugins/typetags/admin/farbtastic/farbtastic.js"}
+{combine_script id="farbtastic" require="jquery" path=$ROOT_URL|@cat:"plugins/typetags/admin/farbtastic/farbtastic.js"}
+{combine_css path=$ROOT_URL|@cat:"plugins/typetags/admin/farbtastic/farbtastic.css"}
 
-<script type="text/javascript">
-  $(document).ready(function(){ldelim}
+{footer_script}
+{literal}
+  $(document).ready(function(){
     $('#colorpicker').farbtastic('#hexval');
   });
-</script>
+{/literal}
+{/footer_script}
 
 <div class="titrePage">
 	<h2>TypeT@gs</h2>
