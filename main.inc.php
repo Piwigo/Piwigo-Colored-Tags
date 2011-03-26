@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: TypeT@gs
-Version: 2.2.0
+Version: 2.2.1
 Description: Allow to manage color of tags, as you want...
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=166
 Author: Sakkhho & P@t & Mistic
@@ -14,12 +14,13 @@ global $prefixeTable ;
 define('typetags_DIR' , basename(dirname(__FILE__)));
 define('typetags_PATH' , PHPWG_PLUGINS_PATH . typetags_DIR . '/');
 define('typetags_TABLE' , $prefixeTable . 'typetags');
+define('typetags_ADMIN', get_root_url().'admin.php?page=plugin-' . typetags_DIR);
 
 function typetags_admin_menu($menu)
 {
   array_push($menu, array(
     'NAME' => 'TypeT@gs',
-    'URL' => get_root_url().'admin.php?page=plugin-' . typetags_DIR,
+    'URL' => typetags_ADMIN,
   ));
   return $menu;
 }

@@ -1,0 +1,57 @@
+.edit-container {
+	width: 500px;
+	margin: auto;
+}
+
+ul.tagSelection li {
+	width:170px !important;
+}
+
+.tt-container {
+	float:left;
+	width:150px;
+	min-height:50px;
+	height:auto;
+	margin:5px !important;
+	padding:0 5px 5px 5px;
+	list-style:none;
+	background-color:#888;
+	border-radius:5px;
+	//border:1px solid #bbb;
+}
+.tt-container li {
+	display:inline;
+	float:none;
+	padding:2px 8px;
+	margin:5px;
+	background-color:#ddd;
+	box-shadow:1px 1px 0px #fff;
+	border-radius:5px;
+	cursor:move;
+}
+.tt-container li:hover {
+	background-color:#c2f5c2;
+	opacity:0.8;
+}
+.tt-container h5 {
+	margin:0 -5px;
+	border-radius:5px 5px 0 0;
+	padding:2px 0;
+	text-align:center;
+	font-size:12px;
+	letter-spacing:0.5em;
+	font-weight:normal;
+}
+.active {
+	background-color:#7cba0f;
+}
+
+.tt-container.NULL {
+	width:98%;
+	box-shadow:inset 0 0 5px #bbb;
+	padding-bottom:10px;
+}
+.tt-container.NULL h5 {
+	background-color:#bbb;
+	font-weight:bold;
+}

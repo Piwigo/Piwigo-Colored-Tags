@@ -1,32 +1,29 @@
 <?php
 
-$lang['typetags_error'] = 'Vous devez renseigner tous les champs (nom et couleur).';
-$lang['typetags_saved'] = 'TypeTag enregistré.';
-$lang['typetags_suppr'] = 'TypeTags supprimés (%d)';
-$lang['typetag_suppr'] = 'TypeTag supprimé';
-$lang['typetags_already exists'] = 'Ce TypeTag existe déjà.';
-$lang['Edit selected typetags'] = 'Editer les TypeTags selectionnés.';
-$lang['Delete selected typetags'] = 'Supprimer les TypeTags selectionnés.';
-$lang['Edit typetags'] = 'Editer les TypeTags';
-$lang['New color'] = 'Nouvelle couleur';
+/* section */
 $lang['Create a Typetag'] = 'Créer un TypeTag';
-$lang['New TypeTag'] = 'Nom du TypeTag';
-$lang['ColorTypeTag'] = 'Couleur du TypeTag';
+$lang['Edit typetag'] = 'Editer le TypeTag';
 $lang['TypeTag selection'] = 'Editer - Supprimer des TypeTags';
-$lang['TypeTag association'] = 'Associer des TypeTags';
-$lang['TypeTag dissociation'] = 'Dissocier des TypeTags';
-$lang['existing_typetag_list'] = 'TypeTag :';
-$lang['associate'] = 'Associer';
-$lang['dissociate'] = 'Dissocier';
-$lang['typetags_associated'] = 'TypeTag associé.';
-$lang['typetags_dissociated'] = 'TypeTag dissocié.';
-$lang['choose_typetag'] = ' Choisir un TypeTag à associer ';
-$lang['error_associate'] = ' Vous devez choisir au moins un Tag ET un TypeTag ';
-$lang['error_dissociate'] = ' Vous devez choisir au moins un Tag à dissocier ';
+$lang['TypeTag association'] = 'Associer - Dissocier des TypeTags';
 
-$lang['Edited TypeTag'] = 'Typetag édité';
+/* fields */
+$lang['Edited TypeTag'] = 'TypeTag édité';
+$lang['New color'] = 'Nouvelle couleur';
+$lang['New TypeTag'] = 'Nom du TypeTag';
 $lang['New name'] = 'Nouveau nom';
+$lang['Color TypeTag'] = 'Couleur du TypeTag';
+
+/* buttons */
 $lang['Modify'] = 'Modifier';
-$lang['You should select only one Typetag to edit.'] = 'Vous ne pouvez éditer qu\'un seul Typetag à la fois.';
+$lang['Delete all associations'] = 'Supprimer toutes les associations';
+
+/* messages */
+$lang['typetag_already_exists'] = 'Ce TypeTag existe déjà';
+$lang['typetag_saved'] = 'TypeTag enregistré';
+$lang['typetag_suppr'] = 'TypeTag supprimé';
+$lang['typetag_unknown'] = 'TypeTag inconnu';
+$lang['typetag_error'] = 'Vous devez renseigner tous les champs (nom et couleur)';
+$lang['All associations have been removed'] = 'Tous les associations ont été supprimées';
+$lang['typetags_associated'] = 'TypeTags associés';
 
 ?>

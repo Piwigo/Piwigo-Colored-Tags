@@ -1,32 +1,29 @@
 <?php
 
-$lang['typetags_error'] = 'Du må inkludere alle felter (navn og farge).';
-$lang['typetags_saved'] = 'TypeTag lagre.';
-$lang['typetags_suppr'] = 'TypeTager slettet.';
-$lang['typetag_suppr'] = 'TypeTag slettet.';
-$lang['typetags_already exists'] = 'Denne TypeTagen eksisterer allerede.';
-$lang['Edit selected typetags'] = 'Rediger valgte TypeTager.';
-$lang['Delete selected typetags'] = 'Slett valgte TypeTager.';
-$lang['Edit typetags'] = 'Rediger TypeTags';
-$lang['New color'] = 'Ny farge';
+/* section */
 $lang['Create a Typetag'] = 'Lag en TypeTag';
-$lang['New TypeTag'] = 'Navn på TypeTag';
-$lang['ColorTypeTag'] = 'Farge på TypeTag';
-$lang['TypeTag selection'] = 'Rediger - Slett TypeTager';
-$lang['TypeTag association'] = 'Assosier TypeTager';
-$lang['TypeTag dissociation'] = 'Dissossier TypeTager';
-$lang['existing_typetag_list'] = 'TypeTag å assosiere med :';
-$lang['associate'] = 'Assossiere';
-$lang['dissociate'] = 'Dissossiere';
-$lang['typetags_associated'] = 'TypeTag assossiert.';
-$lang['typetags_dissociated'] = 'TypeTag dissossiert.';
-$lang['choose_typetag'] = ' Velg TypeTag a assossiere med ';
-$lang['error_associate'] = ' Du må velge Tagger OG en TypeTag ';
-$lang['error_dissociate'] = ' Du må velge Tagger å dissosiere med ';
+$lang['Edit typetag'] = 'Rediger TypeTag';
+$lang['TypeTag selection'] = 'Rediger - Slett TypeTags';
+$lang['TypeTag association'] = 'Assosier - Dissossier TypeTags';
 
-$lang['Edited TypeTag'] = 'Rediger Typetag';
+/* fields */
+$lang['Edited TypeTag'] = 'Rediger TypeTag';
+$lang['New color'] = 'Ny farge';
+$lang['New TypeTag'] = 'Navn på TypeTag';
 $lang['New name'] = 'Nytt navn';
+$lang['Color TypeTag'] = 'Farge på TypeTag';
+
+/* buttons */
 $lang['Modify'] = 'Endre';
-$lang['You should select only one Typetag to edit.'] = 'Du bør velge kun en Typetag å redigere.';
+$lang['Delete all associations'] = 'Delete all associations';
+
+/* messages */
+$lang['typetag_already_exists'] = 'Denne TypeTag eksisterer allerede';
+$lang['typetag_saved'] = 'TypeTag lagre';
+$lang['typetag_suppr'] = 'TypeTag slettet';
+$lang['typetag_unknown'] = 'Unknown TypeTag';
+$lang['typetag_error'] = 'Du må inkludere alle felter (navn og farge)';
+$lang['All associations have been removed'] = 'All associations have been removed';
+$lang['typetags_associated'] = 'TypeTags assossiert';
 
 ?>
