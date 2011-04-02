@@ -6,6 +6,9 @@
 ul.tagSelection li {
 	width:170px !important;
 }
+.tagSelection input {
+	width:120px;
+}
 
 .tt-container {
 	float:left;
@@ -17,7 +20,6 @@ ul.tagSelection li {
 	list-style:none;
 	background-color:#888;
 	border-radius:5px;
-	//border:1px solid #bbb;
 }
 .tt-container li {
 	display:inline;

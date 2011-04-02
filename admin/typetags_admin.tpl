@@ -1,6 +1,5 @@
-{combine_script id="jquery.ui.draggable" require="jquery.ui"}
+{combine_script id="jquery.ui.draggable"}
 {combine_script id="jquery.ui.droppable"}
-
 {combine_script id="farbtastic" require="jquery" path=$ROOT_URL|@cat:"plugins/typetags/admin/farbtastic/farbtastic.js"}
 {combine_css path=$ROOT_URL|@cat:"plugins/typetags/admin/farbtastic/farbtastic.css"}
 {combine_css path=$ROOT_URL|@cat:"plugins/typetags/admin/typetags_style.css"}
@@ -110,7 +109,7 @@
 		<ul class="tagSelection">
 			{foreach from=$typetags_selection item=typetag}
 			<li>
-				<input type="text" readonly="readonly" size="18" style="background-color:{$typetag.color};color:{$typetag.color_text};margin:5px 0;" value="{$typetag.name}">
+				<input type="text" readonly="readonly" style="background-color:{$typetag.color};color:{$typetag.color_text};margin:5px 0;" value="{$typetag.name}">
 				<a href="{$typetag.u_edit}" title="{'edit'|@translate}"><img src="{$themeconf.icon_dir}/edit.png" class="button" alt="{'edit'|@translate}"/></a>
 				<a href="{$typetag.u_delete}" title="{'delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate}');"><img src="{$themeconf.admin_icon_dir}/plug_delete.png" class="button" alt="{'delete'|@translate}"/></a>
 			</li>
