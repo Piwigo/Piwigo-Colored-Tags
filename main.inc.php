@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: TypeT@gs
-Version: 2.2.a
+Version: auto
 Description: Allow to manage color of tags, as you want...
 Plugin URI: http://piwigo.org/ext/extension_view.php?eid=166
 Author: Sakkhho & P@t & Mistic
