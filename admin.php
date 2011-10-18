@@ -226,6 +226,7 @@ $all_tags = pwg_query("
 
 while ($row = pwg_db_fetch_assoc($all_tags)) {
   if ($row['typetagname'] == null) $row['typetagid'] = 'NULL';
+  $row['tagname'] = trigger_event('render_tag_name', $row['tagname']);
   $template->append('typetags_association', $row);
 }
 
