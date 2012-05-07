@@ -1,0 +1,1 @@
+Maakt het mogelijk om kleuren van tags te wijzigen.
