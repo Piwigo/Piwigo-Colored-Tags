@@ -36,4 +36,9 @@ $lang['typetag_saved'] = 'TypeTag opgeslagen';
 $lang['typetag_suppr'] = 'TypeTag verwijderd';
 $lang['typetag_unknown'] = 'Onbekende TypeTag';
 $lang['typetags_associated'] = 'TypeTags toegekend';
+$lang['Display colored tags'] = 'Toon gekleurde tags';
+$lang['Edit and associate TypeTags'] = 'Bewerk en associeer tags';
+$lang['Everywhere'] = 'Overal';
+$lang['Not associated'] = 'Niet gekoppeld';
+$lang['Only on tags page'] = 'Alleen op tags pagina';
 ?>
