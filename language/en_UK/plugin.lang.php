@@ -3,8 +3,7 @@
 /* section */
 $lang['Create a Typetag'] = 'Create a TypeTag';
 $lang['Edit typetag'] = 'Edit TypeTag';
-$lang['TypeTag selection'] = 'Edit - Delete TypeTags';
-$lang['TypeTag association'] = 'Associate - Dissociate TypeTags';
+$lang['Edit and associate TypeTags'] = 'Edit and associate TypeTags';
 
 /* fields */
 $lang['Edited TypeTag'] = 'TypeTag edited';
@@ -12,6 +11,10 @@ $lang['New color'] = 'New color';
 $lang['New TypeTag'] = 'TypeTag name';
 $lang['New name'] = 'New name';
 $lang['Color TypeTag'] = 'TypeTag color';
+$lang['Not associated'] = 'Not associated';
+$lang['Display colored tags'] = 'Display colored tags';
+$lang['Only on tags page'] = 'Only on tags page';
+$lang['Everywhere'] = 'Everywhere';
 
 /* buttons */
 $lang['Modify'] = 'Modify';

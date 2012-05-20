@@ -12,8 +12,8 @@ ul.tagSelection li {
 
 .tt-container {
   float:left;
-  width:150px;
-  min-height:50px;
+  width:250px;
+  min-height:40px;
   height:auto;
   margin:5px !important;
   padding:0 5px 5px 5px;
@@ -24,8 +24,9 @@ ul.tagSelection li {
 .tt-container li {
   display:inline;
   float:none;
-  padding:2px 8px;
-  margin:5px;
+  padding:2px 5px;
+  margin:3px;
+  font-size:0.85em;
   background-color:#ddd;
   box-shadow:1px 1px 0px #fff;
   border-radius:5px;
@@ -36,7 +37,7 @@ ul.tagSelection li {
   opacity:0.8;
 }
 .tt-container h5 {
-  margin:0 -5px;
+  margin:0 -5px 5px -5px;
   border-radius:5px 5px 0 0;
   padding:2px 0;
   text-align:center;
@@ -49,11 +50,18 @@ ul.tagSelection li {
 }
 
 .tt-container.NULL {
-  width:98%;
+  float:none;
+  width:auto;
   box-shadow:inset 0 0 5px #bbb;
   padding-bottom:10px;
 }
 .tt-container.NULL h5 {
   background-color:#bbb;
   font-weight:bold;
+}
+
+.buttons {
+  float:right;
+  margin-left:-37px;
+  margin-top:2px;
 }

@@ -3,8 +3,6 @@
 /* section */
 $lang['Create a Typetag'] = 'Vytvoriť kľúčové slovo';
 $lang['Edit typetag'] = 'Upraviť kľúčového slová';
-$lang['TypeTag selection'] = 'Upraviť - vymazať kľúčového slová';
-$lang['TypeTag association'] = 'Spojené - Rozdelené kľúčového slová';
 
 /* fields */
 $lang['Edited TypeTag'] = 'Upravený typ kľúčového slova';

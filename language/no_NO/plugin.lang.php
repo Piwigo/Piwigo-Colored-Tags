@@ -3,8 +3,6 @@
 /* section */
 $lang['Create a Typetag'] = 'Lag en TypeTag';
 $lang['Edit typetag'] = 'Rediger TypeTag';
-$lang['TypeTag selection'] = 'Rediger - Slett TypeTags';
-$lang['TypeTag association'] = 'Assosier - Dissossier TypeTags';
 
 /* fields */
 $lang['Edited TypeTag'] = 'Rediger TypeTag';

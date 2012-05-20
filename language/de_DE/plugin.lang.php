@@ -3,8 +3,6 @@
 /* section */
 $lang['Create a Typetag'] = 'Einen TypeTag erstellen';
 $lang['Edit typetag'] = 'TypeTag bearbeiten';
-$lang['TypeTag selection'] = 'TypeTags bearbeiten - löschen';
-$lang['TypeTag association'] = 'TypeTags assoziieren - dissoziieren';
 
 /* fields */
 $lang['Edited TypeTag'] = 'TypeTag bearbeiten';

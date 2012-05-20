@@ -3,8 +3,6 @@
 /* section */
 $lang['Create a Typetag'] = 'Izveidot TypeTag';
 $lang['Edit typetag'] = 'Rediģēt TypeTag';
-$lang['TypeTag selection'] = 'Rediģēt - Dzēst TypeTags';
-$lang['TypeTag association'] = 'Sasaistīt - Atsaistīt TypeTags';
 
 /* fields */
 $lang['Edited TypeTag'] = 'Rediģētais TypeTags';

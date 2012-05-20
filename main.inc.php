@@ -9,12 +9,35 @@ Author: Sakkhho & P@t & Mistic
 
 if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
 
-global $prefixeTable ;
+global $prefixeTable, $conf;
 
-define('typetags_DIR' , basename(dirname(__FILE__)));
-define('typetags_PATH' , PHPWG_PLUGINS_PATH . typetags_DIR . '/');
+define('typetags_PATH' , PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
 define('typetags_TABLE' , $prefixeTable . 'typetags');
-define('typetags_ADMIN', get_root_url().'admin.php?page=plugin-' . typetags_DIR);
+define('typetags_ADMIN', get_root_url().'admin.php?page=plugin-' . basename(dirname(__FILE__)));
+
+
+include(typetags_PATH . 'typetags.php');
+$conf['TypeTags'] = unserialize($conf['TypeTags']);
+
+// tags on picture page
+/*if (script_basename() == 'picture')
+{
+  add_event_handler('loc_end_picture', 'typetags_picture');
+}*/
+
+// tags everywhere
+if ($conf['TypeTags']['show_all'])
+{
+  add_event_handler('render_tag_name', 'typetags_render', 0);
+}
+// tags on tags page
+else if (script_basename() == 'tags')
+{
+  add_event_handler('loc_begin_page_header', 'typetags_tags');
+}
+
+
+add_event_handler('get_admin_plugin_menu_links', 'typetags_admin_menu');
 
 function typetags_admin_menu($menu)
 {
@@ -24,17 +47,5 @@ function typetags_admin_menu($menu)
   ));
   return $menu;
 }
-
-function typetags()
-{
-  include(typetags_PATH . 'typetags.php');
-}
-
-if (script_basename() == 'tags')
-{
-  add_event_handler('loc_begin_page_header', 'typetags', 60);
-}
-
-add_event_handler('get_admin_plugin_menu_links', 'typetags_admin_menu');
 
 ?>

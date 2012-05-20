@@ -1,73 +1,141 @@
 <?php
 
-global $page, $template;
-
-$query = '
-SELECT  t.id , tt.color
-FROM ' . typetags_TABLE . ' AS tt
-INNER JOIN ' . TAGS_TABLE . ' AS t
-ON  t.id_typetags = tt.id
-WHERE  t.id_typetags IS NOT NULL ;';
-
-$result = pwg_query($query);
-$tagsColor = array();
-while ($row = mysql_fetch_assoc($result))
+/**
+ * triggered by 'render_tag_name'
+ */
+function typetags_render($tag)
 {
-  $tagsColor[$row['id']] = $row['color'];
-}
-$display = $template->get_template_vars('display_mode');
-
-if ($display == 'letters')
-{
-  $letters = $template->get_template_vars('letters');
-  if (empty($letters)) return;
-  $template->clear_assign('letters');
-
-  foreach ($letters as $k1 => $letter)
+  global $pwg_loaded_plugins;
+  
+  $query = '
+SELECT color
+  FROM '.typetags_TABLE.' AS tt
+    INNER JOIN '.TAGS_TABLE.' AS t
+      ON t.id_typetags = tt.id
+  WHERE t.name = "'.mysql_real_escape_string($tag).'"
+;';;
+  list($color) = pwg_db_fetch_row(pwg_query($query));
+  
+  if ($color === null) 
   {
-    foreach ($letter['tags'] as $k2 => $tag)
+    return $tag;
+  }
+  elseif (isset($pwg_loaded_plugins['ExtendedDescription']))
+  {
+    return "[lang=all]<span style='color:".$color.";'>[/lang]".$tag."[lang=all]</span>[/lang]";
+  }
+  else
+  {
+    return "<span style='color:".$color.";'>".$tag."</span>";
+  }
+}
+
+/**
+ * colors tags on picture page
+ */
+/*function typetags_picture()
+{
+  global $template;
+    
+  $tags = $template->get_template_vars('related_tags');
+  if (empty($tags)) return;
+  
+  $query = '
+SELECT
+    t.id ,
+    tt.color
+  FROM '.typetags_TABLE.' AS tt
+    INNER JOIN '.TAGS_TABLE.' AS t
+      ON t.id_typetags = tt.id
+  WHERE t.id_typetags IS NOT NULL
+;';
+  $tagsColor = simple_hash_from_query($query, 'id', 'color');
+  if (empty($tagsColor)) return;
+
+  foreach ($tags as $key => $tag)
+  {
+    if (isset($tagsColor[ $tag['id'] ]))
     {
-      if (isset($tagsColor[$tag['id']]))
+      $tags[$key]['URL'].= '" style="color:'.$tagsColor[ $tag['id'] ].';';
+    }
+  }
+  
+  $template->clear_assign('related_tags');
+  $template->assign('related_tags', $tags);
+}*/
+
+/**
+ * colors tags on tags page
+ */
+function typetags_tags()
+{
+  global $template;
+
+  $query = '
+SELECT
+    t.id ,
+    tt.color
+  FROM '.typetags_TABLE.' AS tt
+    INNER JOIN '.TAGS_TABLE.' AS t
+      ON t.id_typetags = tt.id
+  WHERE t.id_typetags IS NOT NULL
+;';
+  $tagsColor = simple_hash_from_query($query, 'id', 'color');
+  if (empty($tagsColor)) return;
+
+  $display = $template->get_template_vars('display_mode');
+  if ($display == 'letters')
+  {
+    $letters = $template->get_template_vars('letters');
+    if (empty($letters)) return;
+
+    foreach ($letters as $k1 => $letter)
+    {
+      foreach ($letter['tags'] as $k2 => $tag)
       {
-        $letters[$k1]['tags'][$k2]['URL'] .= '" style="color:' . $tagsColor[$tag['id']];
+        if (isset($tagsColor[ $tag['id'] ]))
+        {
+          $letters[$k1]['tags'][$k2]['URL'].= '" style="color:'.$tagsColor[ $tag['id'] ].';';
+        }
       }
     }
+    
+    $template->clear_assign('letters');
+    $template->assign('letters', $letters);
   }
-  $template->assign('letters', $letters);
-}
-elseif ($display == 'cloud')
-{
-  $tags = $template->get_template_vars('tags');
-  if (empty($tags)) return;
-  $template->clear_assign('tags');
-
-  foreach ($tags as $key => $tag)
+  elseif ($display == 'cloud')
   {
-    if (isset($tagsColor[$tag['id']]))
-    {
-      $tags[$key]['URL'] .= '" style="color:' . $tagsColor[$tag['id']];
-    }
-  }
-  $template->assign('tags', $tags);
-}
-elseif ($display == 'cumulus')
-{
-  $tags = $template->get_template_vars('tags');
-  if (empty($tags)) return;
-  $template->clear_assign('tags');
+    $tags = $template->get_template_vars('tags');
+    if (empty($tags)) return;
 
-  foreach ($tags as $key => $tag)
+    foreach ($tags as $key => $tag)
+    {
+      if (isset($tagsColor[ $tag['id'] ]))
+      {
+        $tags[$key]['URL'].= '" style="color:'.$tagsColor[ $tag['id'] ].';';
+      }
+    }
+    
+    $template->clear_assign('tags');
+    $template->assign('tags', $tags);
+  }
+  elseif ($display == 'cumulus')
   {
-    if (isset($tagsColor[$tag['id']]))
-    {
-      $tagsColor[$tag['id']] = str_replace('#', '0x', $tagsColor[$tag['id']]);
-      $tags[$key]['URL'] .= '\' color=\'' . $tagsColor[$tag['id']] . '\' hicolor=\'' . $tagsColor[$tag['id']];
-    }
-  }
-  $template->assign('tags', $tags);
-}
+    $tags = $template->get_template_vars('tags');
+    if (empty($tags)) return;
 
-// Suppression des liens soulignés
-$template->block_html_head('', '<style type="text/css">#fullTagCloud a, .tagLetter a { border: none; }</style>', $smarty, $repeat);
+    foreach ($tags as $key => $tag)
+    {
+      if (isset($tagsColor[ $tag['id'] ]))
+      {
+        $tagsColor[ $tag['id'] ] = str_replace('#', '0x', $tagsColor[ $tag['id'] ]);
+        $tags[$key]['URL'].= '\' color=\''.$tagsColor[ $tag['id'] ].'\' hicolor=\''.$tagsColor[ $tag['id'] ];
+      }
+    }
+    
+    $template->clear_assign('tags');
+    $template->assign('tags', $tags);
+  }
+}
 
 ?>
