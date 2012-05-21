@@ -36,4 +36,9 @@ $lang['typetag_saved'] = 'Тип тегов сохранен';
 $lang['typetag_suppr'] = 'Тип тегов удален';
 $lang['typetag_unknown'] = 'Неизвестный тип тегов';
 $lang['typetags_associated'] = 'Связи тегов с типами тегов';
+$lang['Display colored tags'] = 'Показать раскрашенные теги';
+$lang['Edit and associate TypeTags'] = 'Редактировать связи TypeTags';
+$lang['Everywhere'] = 'Везде';
+$lang['Not associated'] = 'Не связанные';
+$lang['Only on tags page'] = 'Только на странице тегов';
 ?>
