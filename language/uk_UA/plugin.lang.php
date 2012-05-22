@@ -36,4 +36,9 @@ $lang['typetag_error'] = 'Ви повинні заповнити всі поля
 $lang['typetag_saved'] = 'TypeTag збережено';
 $lang['typetag_suppr'] = 'TypeTag видалено';
 $lang['typetag_unknown'] = 'Невідомий TypeTag';
+$lang['Display colored tags'] = 'Показати кольорові теґи';
+$lang['Edit and associate TypeTags'] = 'Редагувати і асоціювати TypeTags';
+$lang['Everywhere'] = 'Скрізь';
+$lang['Not associated'] = 'Не асоційовано';
+$lang['Only on tags page'] = 'Лише на сторінці теґи';
 ?>
