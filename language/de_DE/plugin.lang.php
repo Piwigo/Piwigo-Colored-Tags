@@ -24,4 +24,9 @@ $lang['typetag_error'] = 'Alle Felder müssen ausgefüllt werden (Name und Farbe
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'TypeTags wurde assoziiert';
 
+$lang['Display colored tags'] = 'Zeige farbige Tags';
+$lang['Edit and associate TypeTags'] = 'Editieren und zuordnen der Tags Typen';
+$lang['Everywhere'] = 'Überall';
+$lang['Not associated'] = 'Nicht zugeordnet';
+$lang['Only on tags page'] = 'Nur auf Tags Seiten';
 ?>
