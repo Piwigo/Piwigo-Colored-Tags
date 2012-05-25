@@ -24,4 +24,9 @@ $lang['typetags_associated'] = 'Kľúčové slovo spojené';
 
 $lang['typetag_saved'] = 'Napísané kľúčové slová uložené';
 $lang['typetag_suppr'] = 'Napísané kľúčové slová vymazané';
+$lang['Display colored tags'] = 'Zobraziť farebne kľúčové slová';
+$lang['Edit and associate TypeTags'] = 'Upraviť a spojiť kľúčové slová';
+$lang['Everywhere'] = 'Všade';
+$lang['Not associated'] = 'Nespojené';
+$lang['Only on tags page'] = 'Len na stránke kľúčových slov';
 ?>
