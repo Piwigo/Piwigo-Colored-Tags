@@ -36,4 +36,9 @@ $lang['typetag_error'] = 'Należy uzupełnić wszystkie pola (nazwę i kolor)';
 $lang['typetag_saved'] = 'Zapisano TypeTag';
 $lang['typetag_suppr'] = 'Skasowano TypeTag';
 $lang['typetag_unknown'] = 'Nieznany TypeTag';
+$lang['Display colored tags'] = 'Wyświetl kolorowe etykiety';
+$lang['Edit and associate TypeTags'] = 'Edycja i powiązania TypeTags';
+$lang['Everywhere'] = 'Wszędzie';
+$lang['Not associated'] = 'Nie powiązany';
+$lang['Only on tags page'] = 'Tylko na stronie etykiet';
 ?>
