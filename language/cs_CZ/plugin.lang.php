@@ -36,4 +36,9 @@ $lang['typetag_saved'] = 'TypeTag uložen';
 $lang['typetag_suppr'] = 'TypeTag smazán';
 $lang['typetag_unknown'] = 'Neznámý TypeTag';
 $lang['typetags_associated'] = 'TypeTagy přiřazeny';
+$lang['Display colored tags'] = 'Zobrazení barevné visačky';
+$lang['Edit and associate TypeTags'] = 'Editace a spojení s TapeTags';
+$lang['Everywhere'] = 'Kdekoliv';
+$lang['Not associated'] = 'Nespojeno';
+$lang['Only on tags page'] = 'Pouze na stránce visaček/tagů';
 ?>
