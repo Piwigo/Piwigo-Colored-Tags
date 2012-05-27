@@ -23,4 +23,22 @@
 $lang['Modify'] = 'Modificar';
 $lang['New color'] = 'Nou color';
 $lang['New name'] = 'Nou nom';
+$lang['All associations have been removed'] = 'Totes les associacions has sigut eliminades';
+$lang['Color TypeTag'] = 'Color del TypeTag';
+$lang['Create a Typetag'] = 'Crear un TypeTag';
+$lang['Delete all associations'] = 'Eliminar totes les associacions';
+$lang['Display colored tags'] = 'Visualitzar les etiquetes colorejades';
+$lang['Edit and associate TypeTags'] = 'Editar i associar TypeTags';
+$lang['Edit typetag'] = 'Editar TypeTag';
+$lang['Edited TypeTag'] = 'TypeTag editat';
+$lang['Everywhere'] = 'A tot arreu';
+$lang['New TypeTag'] = 'Nom del TypeTag';
+$lang['Not associated'] = 'No associat';
+$lang['Only on tags page'] = 'Només a la pàgina etiquetes';
+$lang['typetag_already_exists'] = 'Aquest TypeTag ja existeix';
+$lang['typetag_error'] = 'Cal omplir tots els camps (nom i color)';
+$lang['typetag_saved'] = 'TypeTag desat';
+$lang['typetag_suppr'] = 'TypeTag eliminat';
+$lang['typetag_unknown'] = 'TypeTag desconegut';
+$lang['typetags_associated'] = 'TypeTags associades';
 ?>
