@@ -24,4 +24,9 @@ $lang['typetag_error'] = 'Dovete inserire tutti campi (nome e colore)';
 $lang['All associations have been removed'] = 'Tutte le associazioni sono state rimosse';
 $lang['typetags_associated'] = 'TypeTag associato';
 
+$lang['Display colored tags'] = 'Mostra tag colorati';
+$lang['Edit and associate TypeTags'] = 'Modifica e associa i TypeTags';
+$lang['Everywhere'] = 'Dovunque';
+$lang['Not associated'] = 'Non associato';
+$lang['Only on tags page'] = 'Solo sulla pagina dei tag';
 ?>
