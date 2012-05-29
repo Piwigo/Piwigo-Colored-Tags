@@ -24,4 +24,9 @@ $lang['typetag_error'] = 'Du må inkludere alle felter (navn og farge)';
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'TypeTags assossiert';
 
+$lang['Display colored tags'] = 'Vis farga tagger';
+$lang['Edit and associate TypeTags'] = 'Endre og forbinde Type Tags ';
+$lang['Everywhere'] = 'Overalt';
+$lang['Not associated'] = 'Ikke forbundet';
+$lang['Only on tags page'] = 'Bare på tagget side';
 ?>
