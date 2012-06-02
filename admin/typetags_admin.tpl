@@ -71,23 +71,13 @@ jQuery('.tt-container').droppable({
 <div class="titrePage">
   <h2>TypeT@gs</h2>
 </div>
-
-<form action="{$typetags_ADMIN}" method="post" name="form">
-<fieldset>
-  <legend>{'Configuration'|@translate}</legend>
-  <b>{'Display colored tags'|@translate}</b>
-  <label><input type="radio" name="show_all" value="false" {if not $SHOW_ALL}checked="checked"{/if}> {'Only on tags page'|@translate}</label>
-  <label><input type="radio" name="show_all" value="true" {if $SHOW_ALL}checked="checked"{/if}> {'Everywhere'|@translate}</label>
-  <p><input class="submit" type="submit" name="save_config" value="{'Submit'|@translate}"></p> 
-</fieldset>
-</form>
  
 <form action="{$typetags_ADMIN}" method="post" name="form">
   <fieldset>
-  {if isset($edited_typetag)}
+  {if isset($IN_EDIT)}
     <legend>{'Edit typetag'|@translate}</legend>
     <div class="edit-container">
-      <div id="colorpicker" style="float:right;"></div>
+      <div id="colorpicker"></div>
       <p><b>{'Edited TypeTag'|@translate} : <input type="text" readonly="readonly" size="18" style="background-color:{$typetag.OLD_COLOR};color:{$typetag.COLOR_TEXT};" value="{$typetag.OLD_NAME}"></b></p>
       <p>&nbsp;</p>
       <p>{'New name'|@translate} : <input type="text" size="18" name="typetag_name" value="{$typetag.NAME}"></p>
@@ -102,8 +92,7 @@ jQuery('.tt-container').droppable({
   {else}
     <legend>{'Create a Typetag'|@translate}</legend>
     <div class="edit-container">
-      <div id="colorpicker" style="float:right;"></div>
-      <p>&nbsp;</p>
+      <div id="colorpicker"></div>
       <p>{'New TypeTag'|@translate} : <input type="text" size="18" name="typetag_name" value="{if isset($typetag.NAME)}{$typetag.NAME}{/if}"></p>
       <p>{'Color TypeTag'|@translate} : <input type="text" id="hexval" name="typetag_color" size="7" maxlength="7" value="{if isset($typetag.COLOR)}{$typetag.COLOR}{else}#444444{/if}"></p>
       <p>&nbsp;</p>
@@ -115,7 +104,7 @@ jQuery('.tt-container').droppable({
   </fieldset>
 </form>
 
-{if !empty($typetags_selection)}
+{if !empty($typetags_selection) and !isset($IN_EDIT)}
 <form action="{$typetags_ADMIN}" method="post" name="form" onsubmit="save_datas(this);">
   <fieldset>
     <legend>{'Edit and associate TypeTags'|@translate}</legend>
@@ -148,5 +137,17 @@ jQuery('.tt-container').droppable({
       <input class="submit" type="submit" name="delete_all_assoc" value="{'Delete all associations'|@translate}" onclick="return confirm('{'Are you sure?'|@translate}');">
     </p>
   </fieldset>
+</form>
+{/if}
+
+{if !isset($IN_EDIT)}
+<form action="{$typetags_ADMIN}" method="post" name="form">
+<fieldset>
+  <legend>{'Configuration'|@translate}</legend>
+  <b>{'Display colored tags'|@translate}</b>
+  <label><input type="radio" name="show_all" value="false" {if not $SHOW_ALL}checked="checked"{/if}> {'Only on tags page'|@translate}</label>
+  <label><input type="radio" name="show_all" value="true" {if $SHOW_ALL}checked="checked"{/if}> {'Everywhere'|@translate}</label>
+  <p><input class="submit" type="submit" name="save_config" value="{'Submit'|@translate}"></p> 
+</fieldset>
 </form>
 {/if}

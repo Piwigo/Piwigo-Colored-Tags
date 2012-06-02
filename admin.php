@@ -278,6 +278,8 @@ SELECT
     'NAME' => isset($edited_typetag['name']) ? $edited_typetag['name'] : $row['name'],
     'COLOR'=> isset($edited_typetag['color']) ? $edited_typetag['color'] : $row['color'],
   ));
+  
+  $template->assign('IN_EDIT', true);
 }
 
 // +-----------------------------------------------------------------------+

@@ -3,6 +3,11 @@
   margin: auto;
 }
 
+#colorpicker {
+  float:right;
+  margin-top:-15px;
+}
+
 ul.tagSelection li {
   width:170px !important;
 }
