@@ -40,4 +40,5 @@ $lang['typetag_error'] = 'Deve preencher todos os campos ( nome e cor)';
 $lang['typetag_saved'] = 'Tipo de etiqueta salvo';
 $lang['typetag_suppr'] = 'Apagado o tipo de etiqueta';
 $lang['typetag_unknown'] = 'Tipo de etiqueta desconhecida';
+$lang['typetags_associated'] = 'TypeTags associado ';
 ?>
