@@ -24,4 +24,9 @@ $lang['typetag_error'] = 'Jums jāinformē visus laukus (nosaukums un krāsa)';
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'TypeTags sasaistīts';
 
+$lang['Display colored tags'] = 'Attēlot krāsu Tegus';
+$lang['Edit and associate TypeTags'] = 'Rediģēt un sasaistīt TypeTagus';
+$lang['Everywhere'] = 'Jebkur';
+$lang['Not associated'] = 'Nepiesaistīts';
+$lang['Only on tags page'] = 'Tikai tegu lapā';
 ?>
