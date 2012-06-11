@@ -5,7 +5,12 @@
  */
 function typetags_render($tag)
 {
-  global $pwg_loaded_plugins;
+  global $pwg_loaded_plugins, $page;
+  
+  if ( defined('IN_ADMIN') and in_array($page['page'], array('photo', 'batch_manager')) )
+  {
+    return $tag;
+  }
   
   $query = '
 SELECT color
