@@ -26,7 +26,7 @@ $conf['TypeTags'] = unserialize($conf['TypeTags']);
 }*/
 
 // tags everywhere
-if ($conf['TypeTags']['show_all'])
+if ( $conf['TypeTags']['show_all'] and script_basename() != 'tags' )
 {
   add_event_handler('render_tag_name', 'typetags_render', 0);
 }
