@@ -1,0 +1,1 @@
+Gør det muligt at håndtere tags farver, præcis som du ønsker dem.
