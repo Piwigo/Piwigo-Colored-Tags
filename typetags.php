@@ -17,7 +17,7 @@ SELECT color
   FROM '.typetags_TABLE.' AS tt
     INNER JOIN '.TAGS_TABLE.' AS t
       ON t.id_typetags = tt.id
-  WHERE t.name = "'.mysql_real_escape_string($tag).'"
+  WHERE t.name = "'.pwg_db_real_escape_string($tag).'"
 ;';;
   list($color) = pwg_db_fetch_row(pwg_query($query));
   

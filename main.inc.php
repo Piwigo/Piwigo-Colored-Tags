@@ -16,7 +16,7 @@ define('typetags_TABLE' , $prefixeTable . 'typetags');
 define('typetags_ADMIN', get_root_url().'admin.php?page=plugin-' . basename(dirname(__FILE__)));
 
 
-include(typetags_PATH . 'typetags.php');
+include_once(typetags_PATH . 'typetags.php');
 $conf['TypeTags'] = unserialize($conf['TypeTags']);
 
 // tags on picture page

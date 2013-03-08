@@ -241,7 +241,7 @@ while ($row = pwg_db_fetch_assoc($all_tags))
 $query = 'SELECT * FROM '.typetags_TABLE.' ORDER BY name;';
 $all_typetags = pwg_query($query);
 
-while ($row = mysql_fetch_assoc($all_typetags))
+while ($row = pwg_db_fetch_assoc($all_typetags))
 {
   $row['color_text'] = get_color_text($row['color']);
   $row['u_edit'] = typetags_ADMIN . '&edittypetag=' . $row['id'];

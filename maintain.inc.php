@@ -13,7 +13,7 @@ function plugin_install()
   }
 
   $result = pwg_query('SHOW TABLES LIKE "' . $prefixeTable .'typetags"');
-  if (!mysql_fetch_row($result))
+  if (!pwg_db_num_rows($result))
   {
     $query = '
 CREATE TABLE `'. $prefixeTable .'typetags` (

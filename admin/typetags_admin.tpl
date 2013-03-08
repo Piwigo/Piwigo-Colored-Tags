@@ -122,8 +122,8 @@ jQuery('.tt-container').droppable({
     {foreach from=$typetags_selection item=typetag}
       <ul id="tt-{$typetag.id}" class="tt-container" style="box-shadow:inset 0 0 5px {$typetag.color};">
         <span class="buttons">
-          <a href="{$typetag.u_edit}" title="{'edit'|@translate}"><img src="{$themeconf.icon_dir}/edit.png" class="button" alt="{'edit'|@translate}"></a>
-          <a href="{$typetag.u_delete}" title="{'delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate}');"><img src="{$themeconf.icon_dir}/delete.png" class="button" alt="{'delete'|@translate}"></a>
+          <a href="{$typetag.u_edit}" title="{'edit'|@translate}"><img src="{$ROOT_URL}{$themeconf.admin_icon_dir}/edit_s.png" class="button" alt="{'edit'|@translate}"></a>
+          <a href="{$typetag.u_delete}" title="{'delete'|@translate}" onclick="return confirm('{'Are you sure?'|@translate}');"><img src="{$ROOT_URL}{$themeconf.admin_icon_dir}/delete.png" class="button" alt="{'delete'|@translate}"></a>
         </span>
         <h5 style="background-color:{$typetag.color};color:{$typetag.color_text};">{$typetag.name}</h5>
       </ul>
