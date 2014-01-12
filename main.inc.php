@@ -1,23 +1,27 @@
 <?php
 /*
-Plugin Name: TypeT@gs
+Plugin Name: Coloured Tags (TypeT@gs)
 Version: auto
 Description: Allow to manage color of tags, as you want...
-Plugin URI: http://piwigo.org/ext/extension_view.php?eid=166
-Author: Sakkhho & P@t & Mistic
+Plugin URI: auto
+Author: Mistic
 */
 
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 global $prefixeTable, $conf;
 
-define('typetags_PATH' , PHPWG_PLUGINS_PATH . basename(dirname(__FILE__)) . '/');
-define('typetags_TABLE' , $prefixeTable . 'typetags');
-define('typetags_ADMIN', get_root_url().'admin.php?page=plugin-' . basename(dirname(__FILE__)));
+define('TYPETAGS_ID',      basename(dirname(__FILE__)));
+define('TYPETAGS_PATH' ,   PHPWG_PLUGINS_PATH . TYPETAGS_ID . '/');
+define('TYPETAGS_TABLE' ,  $prefixeTable . 'typetags');
+define('TYPETAGS_ADMIN',   get_root_url().'admin.php?page=plugin-' . TYPETAGS_ID);
+define('TYPETAGS_VERSION', 'auto');
 
 
-include_once(typetags_PATH . 'typetags.php');
 $conf['TypeTags'] = unserialize($conf['TypeTags']);
+
+
+include_once(TYPETAGS_PATH . 'include/events_public.inc.php');
 
 // tags on picture page
 /*if (script_basename() == 'picture')
@@ -26,26 +30,20 @@ $conf['TypeTags'] = unserialize($conf['TypeTags']);
 }*/
 
 // tags everywhere
-if ( $conf['TypeTags']['show_all'] and script_basename() != 'tags' )
+if ($conf['TypeTags']['show_all'] and script_basename() != 'tags')
 {
-  add_event_handler('render_tag_name', 'typetags_render', 0);
+  add_event_handler('render_tag_name', 'typetags_render', 0, 2);
 }
+
 // tags on tags page
-else if (script_basename() == 'tags')
+add_event_handler('loc_end_tags', 'typetags_tags');
+
+
+if (defined('IN_ADMIN'))
 {
-  add_event_handler('loc_begin_page_header', 'typetags_tags');
+  add_event_handler('get_admin_plugin_menu_links', 'typetags_admin_menu');
+
+  add_event_handler('loc_begin_admin_page', 'typetags_admin');
+
+  include_once(TYPETAGS_PATH . 'include/events_admin.inc.php');
 }
-
-
-add_event_handler('get_admin_plugin_menu_links', 'typetags_admin_menu');
-
-function typetags_admin_menu($menu)
-{
-  array_push($menu, array(
-    'NAME' => 'TypeT@gs',
-    'URL' => typetags_ADMIN,
-  ));
-  return $menu;
-}
-
-?>

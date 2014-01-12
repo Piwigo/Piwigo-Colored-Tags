@@ -18,7 +18,7 @@ $lang['Delete all associations'] = 'Delete all associations';
 /* messages */
 $lang['typetag_already_exists'] = 'Tento typ kľúčového slova už existuje';
 $lang['typetag_unknown'] = 'Unknown TypeTag';
-$lang['typetag_error'] = 'Môžete meniť všetky údaje (názov a farbu)';
+$lang['You must fill all fields (name and color)'] = 'Môžete meniť všetky údaje (názov a farbu)';
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'Kľúčové slovo spojené';
 

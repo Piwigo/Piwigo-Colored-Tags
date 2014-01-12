@@ -20,7 +20,7 @@ $lang['typetag_already_exists'] = 'Este TypeTag ya existe';
 $lang['typetag_saved'] = 'TypeTag registrado';
 $lang['typetag_suppr'] = 'TypeTag suprimido';
 $lang['typetag_unknown'] = 'Unknown TypeTag';
-$lang['typetag_error'] = 'Usted debe informar todos los campos (nombre y color)';
+$lang['You must fill all fields (name and color)'] = 'Usted debe informar todos los campos (nombre y color)';
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'TypeTags asociado';
 

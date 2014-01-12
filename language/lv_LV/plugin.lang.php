@@ -20,7 +20,7 @@ $lang['typetag_already_exists'] = 'Šis TypeTag jau eksistē';
 $lang['typetag_saved'] = 'TypeTag saglabāts';
 $lang['typetag_suppr'] = 'TypeTag dzēsti';
 $lang['typetag_unknown'] = 'Unknown TypeTag';
-$lang['typetag_error'] = 'Jums jāinformē visus laukus (nosaukums un krāsa)';
+$lang['You must fill all fields (name and color)'] = 'Jums jāinformē visus laukus (nosaukums un krāsa)';
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'TypeTags sasaistīts';
 

@@ -20,7 +20,7 @@ $lang['typetag_already_exists'] = 'Denne TypeTag eksisterer allerede';
 $lang['typetag_saved'] = 'TypeTag lagre';
 $lang['typetag_suppr'] = 'TypeTag slettet';
 $lang['typetag_unknown'] = 'Unknown TypeTag';
-$lang['typetag_error'] = 'Du må inkludere alle felter (navn og farge)';
+$lang['You must fill all fields (name and color)'] = 'Du må inkludere alle felter (navn og farge)';
 $lang['All associations have been removed'] = 'All associations have been removed';
 $lang['typetags_associated'] = 'TypeTags assossiert';
 

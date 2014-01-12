@@ -1,202 +1,142 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+defined('TYPETAGS_PATH') or die('Hacking attempt!');
 
-load_language('plugin.lang', typetags_PATH);
+load_language('plugin.lang', TYPETAGS_PATH);
 
-function get_color_text($color)
-{
-  if (strlen($color) == 7)
-  {
-    $rgb[] = hexdec(substr($color, 1, 2))/255;
-    $rgb[] = hexdec(substr($color, 3, 2))/255;
-    $rgb[] = hexdec(substr($color, 5, 2))/255;
-  }
-  else if (strlen($color) == 4)
-  {
-    $rgb[] = hexdec(substr($color, 1, 1))/15;
-    $rgb[] = hexdec(substr($color, 2, 1))/15;
-    $rgb[] = hexdec(substr($color, 3, 1))/15;
-  }
-  $l = (min($rgb) + max($rgb)) / 2;
-  return $l > 0.45 ? '#000' : '#fff';
-}
+include_once(TYPETAGS_PATH . 'include/functions.inc.php');
+
 
 // +-----------------------------------------------------------------------+
 // |                                edit typetags                          |
 // +-----------------------------------------------------------------------+
-
-if ( isset($_POST['edittypetag']) and (empty($_POST['typetag_name']) or empty($_POST['typetag_color'])) )
+if (isset($_POST['edittypetag']))
 {
-  $edited_typetag = array(
-    'id' => $_POST['edited_typetag'],
-    'name' => $_POST['typetag_name'],
-    'color' => $_POST['typetag_color'],
-  );
-  
-  array_push($page['errors'],  l10n('typetag_error'));
-}
-else if (isset($_POST['edittypetag']))
-{
-  // we must not rename typetag with an already existing name
-  $query = '
+  if (empty($_POST['typetag_name']) or empty($_POST['typetag_color']))
+  {
+    $page['errors'][] = l10n('You must fill all fields (name and color)');
+  }
+  else
+  {
+    // we must not rename typetag with an already existing name
+    $query = '
 SELECT id
-  FROM '.typetags_TABLE.'
+  FROM ' . TYPETAGS_TABLE . '
   WHERE
-    name = "'.$_POST['typetag_name'].'"
-    AND id != '.$_POST['edited_typetag'].'
+    name = "' . pwg_db_real_escape_string($_POST['typetag_name']) . '"
+    AND id != ' . $_POST['edited_typetag'] . '
 ;';
 
-  if ( pwg_db_num_rows(pwg_query($query)) )
+    if (pwg_db_num_rows(pwg_query($query)))
+    {
+      $page['errors'][] = l10n('This name is already used');
+    }
+    else if ( ($color = check_color($_POST['typetag_color'])) === false )
+    {
+      $page['errors'][] = l10n('Invalid color');
+    }
+    else
+    {
+      $query = '
+UPDATE '.TYPETAGS_TABLE.'
+  SET
+    name = "' . pwg_db_real_escape_string($_POST['typetag_name']) . '",
+    color = "' . $color . '"
+  WHERE id = ' . $_POST['edited_typetag'] . '
+;';
+      pwg_query($query);
+
+      $page['infos'][] = l10n('Color saved');
+    }
+  }
+
+  if (count($page['errors']))
   {
     $edited_typetag = array(
       'id' => $_POST['edited_typetag'],
       'name' => $_POST['typetag_name'],
       'color' => $_POST['typetag_color'],
-    );
-    
-    array_push($page['errors'], l10n('typetag_already_exists'));
-  }
-  else
-  {
-    $query = '
-UPDATE '.typetags_TABLE.'
-  SET 
-    name = "'.$_POST['typetag_name'].'",
-    color = "'.$_POST['typetag_color'].'"
-  WHERE id = '.$_POST['edited_typetag'].'
-;';
-    pwg_query($query);
-    
-    array_push($page['infos'], l10n('typetag_saved'));
+      );
   }
 }
 
 // +-----------------------------------------------------------------------+
 // |                           delete typetags                             |
 // +-----------------------------------------------------------------------+
-
 if (isset($_GET['deletetypetag']))
 {
   $query = '
-SELECT id
-  FROM '.typetags_TABLE.'
-  WHERE id = '.$_GET['deletetypetag'].'
-;';
-  
-  if ( pwg_db_num_rows(pwg_query($query)) )
-  {
-    $query = '
-UPDATE '.TAGS_TABLE.'
+UPDATE ' . TAGS_TABLE . '
   SET id_typetags = NULL
-  WHERE id_typetags = '.$_GET['deletetypetag'].'
+  WHERE id_typetags = ' . intval($_GET['deletetypetag']) . '
 ;';
-    pwg_query($query);
-    
-    $query = '
-DELETE FROM '.typetags_TABLE.'
-  WHERE id = '.$_GET['deletetypetag'].'
+  pwg_query($query);
+
+  $query = '
+DELETE FROM ' . TYPETAGS_TABLE . '
+  WHERE id = ' . intval($_GET['deletetypetag']) . '
 ;';
-    pwg_query($query);
-    
-    array_push($page['infos'], l10n('typetag_suppr'));
-  }
-  else
+  pwg_query($query);
+
+  if (pwg_db_changes())
   {
-    array_push($page['errors'], l10n('typetag_unknown'));
+    $page['infos'][] = l10n('Color deleted');
   }
 }
 
 // +-----------------------------------------------------------------------+
 // |                               add a typetag                           |
 // +-----------------------------------------------------------------------+
-
-if ( isset($_POST['addtypetag']) and (empty($_POST['typetag_name']) or empty($_POST['typetag_color'])) )
+if (isset($_POST['addtypetag']))
 {
-  $template->assign('typetag', array(
-    'NAME' => $_POST['typetag_name'],
-    'COLOR' => $_POST['typetag_color'],
-  ));
-  
-  array_push($page['errors'], l10n('typetag_error'));
-}
-else if (isset($_POST['addtypetag']))
-{
-  $typetag_name = $_POST['typetag_name'];
-  $typetag_color = $_POST['typetag_color'];
-
-  // does the tag already exists?
-  $query = '
-SELECT id
-  FROM '.typetags_TABLE.'
-  WHERE name = "'.$_POST['typetag_name'].'"
-';
-
-  if ( pwg_db_num_rows(pwg_query($query)) )
+  if (empty($_POST['typetag_name']) or empty($_POST['typetag_color']))
   {
-    $template->assign('typetag', array(
-      'NAME' => $_POST['typetag_name'],
-      'COLOR' => $_POST['typetag_color'],
-    ));
-    
-    array_push($page['errors'], l10n('typetag_already_exists'));
+    $page['errors'][] = l10n('You must fill all fields (name and color)');
   }
   else
   {
+    $typetag_name = $_POST['typetag_name'];
+    $typetag_color = $_POST['typetag_color'];
+
+    // does the tag already exists?
     $query = '
-INSERT INTO '.typetags_TABLE.'(
+SELECT id
+  FROM ' . TYPETAGS_TABLE . '
+  WHERE name = "' . pwg_db_real_escape_string($_POST['typetag_name']) . '"
+';
+
+    if (pwg_db_num_rows(pwg_query($query)))
+    {
+      $page['errors'][] = l10n('This name is already used');
+    }
+    else if ( ($color = check_color($_POST['typetag_color'])) === false )
+    {
+      $page['errors'][] = l10n('Invalid color');
+    }
+    else
+    {
+      $query = '
+INSERT INTO ' . TYPETAGS_TABLE . '(
     name,
     color
   )
   VALUES(
-    "'.$_POST['typetag_name'].'",
-    "'.$_POST['typetag_color'].'"
+    "' . pwg_db_real_escape_string($_POST['typetag_name']) . '",
+    "' . $color . '"
   )
 ;';
-    pwg_query($query);
+      pwg_query($query);
 
-    array_push($page['infos'], l10n('typetag_saved'));
-  }
-}
-
-// +-----------------------------------------------------------------------+
-// |                           Associate Tag to Typetage                   |
-// +-----------------------------------------------------------------------+
-
-if (isset($_POST['delete_all_assoc'])) 
-{
-  pwg_query('UPDATE '.TAGS_TABLE.' SET id_typetags = NULL;');
-  array_push($page['infos'], l10n('All associations have been removed'));
-} 
-else if (isset($_POST['associations'])) 
-{
-  // beautify the parameters array
-  $string = preg_replace('#[;]$#', null, $_POST['associations']);
-  $associations = array();
-  $a = explode(';', $string);
-  
-  foreach ($a as $s) 
-  {
-    $v = explode(':', $s);
-    $associations[ltrim($v[0],'t-')] = ltrim($v[1],'tt-');
+      $page['infos'][] = l10n('Color added');
+    }
   }
 
-  // save associations
-  $updates = array();
-  foreach ($associations as $tag => $typetag) 
+  if (count($page['errors']))
   {
-    array_push($updates, array(
-      'id' => $tag,
-      'id_typetags' => $typetag,
+    $template->assign('typetag', array(
+      'NAME' => $_POST['typetag_name'],
+      'COLOR' => $_POST['typetag_color'],
       ));
   }
-  
-  mass_updates(
-    TAGS_TABLE, 
-    array('primary' => array('id'), 'update' => array('id_typetags')),
-    $updates
-    );
-  
-  array_push($page['infos'], l10n('typetags_associated'));
 }
 
 // +-----------------------------------------------------------------------+
@@ -207,8 +147,9 @@ if (isset($_POST['save_config']))
   $conf['TypeTags'] = array(
     'show_all' => $_POST['show_all'] == 'true',
     );
-    
+
   conf_update_param('TypeTags', serialize($conf['TypeTags']));
+  $page['infos'][] = l10n('Information data registered in database');
 }
 
 $template->assign('SHOW_ALL', $conf['TypeTags']['show_all']);
@@ -216,57 +157,36 @@ $template->assign('SHOW_ALL', $conf['TypeTags']['show_all']);
 // +-----------------------------------------------------------------------+
 // |                             template init                             |
 // +-----------------------------------------------------------------------+
-
-$template->set_filenames(array('plugin_admin_content' => dirname(__FILE__) . '/admin/typetags_admin.tpl'));
-
-// get all tags
-$query = '
-SELECT 
-    id as tagid,
-    name as tagname, 
-    id_typetags as typetagid
-  FROM '.TAGS_TABLE.'
-  ORDER BY name ASC
-;';
-$all_tags = pwg_query($query);
-
-while ($row = pwg_db_fetch_assoc($all_tags))
-{
-  if (!$row['typetagid']) $row['typetagid'] = 'NULL';
-  $row['tagname'] = strip_tags(trigger_event('render_tag_name', $row['tagname']));
-  $template->append('typetags_association', $row);
-}
+$template->assign('TYPETAGS_PATH', TYPETAGS_PATH);
+$template->assign('F_ACTION', TYPETAGS_ADMIN);
 
 // get all typetags
-$query = 'SELECT * FROM '.typetags_TABLE.' ORDER BY name;';
-$all_typetags = pwg_query($query);
+$query = 'SELECT * FROM ' . TYPETAGS_TABLE . ' ORDER BY name;';
+$result = pwg_query($query);
 
-while ($row = pwg_db_fetch_assoc($all_typetags))
+while ($row = pwg_db_fetch_assoc($result))
 {
   $row['color_text'] = get_color_text($row['color']);
-  $row['u_edit'] = typetags_ADMIN . '&edittypetag=' . $row['id'];
-  $row['u_delete'] = typetags_ADMIN . '&deletetypetag=' . $row['id'];
-  
-  $template->append('typetags_selection', $row);
+  $row['u_edit'] = TYPETAGS_ADMIN . '&amp;edittypetag=' . $row['id'];
+  $row['u_delete'] = TYPETAGS_ADMIN . '&amp;deletetypetag=' . $row['id'];
+
+  $template->append('typetags', $row);
 }
 
 // edit form
 if (isset($_GET['edittypetag']))
 {
-  $edited_typetag['id'] = $_GET['edittypetag'];
+  $edited_typetag['id'] = intval($_GET['edittypetag']);
 }
 
-if (isset($edited_typetag['id']))
+if (isset($edited_typetag['id']) and $edited_typetag['id']>0)
 {
   $template->assign('edited_typetag', $edited_typetag['id']);
-  
+
 $query = '
-SELECT 
-    id,
-    name,
-    color
-  FROM '.typetags_TABLE.'
-  WHERE id = '.$edited_typetag['id'].'
+SELECT *
+  FROM ' . TYPETAGS_TABLE . '
+  WHERE id = ' . $edited_typetag['id'] . '
 ;';
   $row = pwg_db_fetch_assoc(pwg_query($query));
 
@@ -277,16 +197,13 @@ SELECT
     'COLOR_TEXT' => get_color_text($row['color']),
     'NAME' => isset($edited_typetag['name']) ? $edited_typetag['name'] : $row['name'],
     'COLOR'=> isset($edited_typetag['color']) ? $edited_typetag['color'] : $row['color'],
-  ));
-  
+    ));
+
   $template->assign('IN_EDIT', true);
 }
 
 // +-----------------------------------------------------------------------+
 // |                           sending html code                           |
 // +-----------------------------------------------------------------------+
-
-$template->assign('typetags_ADMIN', typetags_ADMIN);
-$template->assign_var_from_handle('ADMIN_CONTENT', 'plugin_admin_content');
-
-?>
+$template->set_filename('typetags', realpath(TYPETAGS_PATH . 'template/admin.tpl'));
+$template->assign_var_from_handle('ADMIN_CONTENT', 'typetags');

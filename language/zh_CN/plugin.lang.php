@@ -22,7 +22,7 @@
 // +-----------------------------------------------------------------------+
 $lang['Edit and associate TypeTags'] = '编辑和关联TypeTag（标签组）';
 $lang['Not associated'] = '尚未关联到标签组的标签';
-$lang['typetag_error'] = '请完整填写信息（名称与颜色）';
+$lang['You must fill all fields (name and color)'] = '请完整填写信息（名称与颜色）';
 $lang['typetags_associated'] = 'TypeTag（标签组）已关联';
 $lang['All associations have been removed'] = '所有关联已删除';
 $lang['Color TypeTag'] = 'TypeTag（标签组）颜色';

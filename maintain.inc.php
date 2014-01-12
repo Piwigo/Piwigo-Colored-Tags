@@ -1,22 +1,32 @@
 <?php
-if (!defined('PHPWG_ROOT_PATH')) die('Hacking attempt!');
+defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
-function plugin_install()
+class typetags_maintain extends PluginMaintain
 {
-  global $prefixeTable;
+  private $installed = false;
 
-  $query = 'SHOW FULL COLUMNS FROM ' . TAGS_TABLE . ';';
-  $result = array_from_query($query, 'Field');
-  if (!in_array('id_typetags', $result))
-  {
-    pwg_query('ALTER TABLE '.TAGS_TABLE.' ADD COLUMN `id_typetags` SMALLINT(5);');
-  }
+  private $default_conf = array(
+    'show_all'=>true,
+    );
 
-  $result = pwg_query('SHOW TABLES LIKE "' . $prefixeTable .'typetags"');
-  if (!pwg_db_num_rows($result))
+  function install($plugin_version, &$errors=array())
   {
+    global $conf, $prefixeTable;
+
+    if (empty($conf['TypeTags']))
+    {
+      $conf['TypeTags'] = serialize($this->default_conf);
+      conf_update_param('TypeTags', $conf['TypeTags']);
+    }
+
+    $result = pwg_query('SHOW COLUMNS FROM `' . TAGS_TABLE . '` LIKE "id_typetags";');
+    if (!pwg_db_num_rows($result))
+    {
+      pwg_query('ALTER TABLE `' . TAGS_TABLE . '` ADD `id_typetags` SMALLINT(5) DEFAULT NULL;');
+    }
+
     $query = '
-CREATE TABLE `'. $prefixeTable .'typetags` (
+CREATE TABLE IF NOT EXISTS `' . $prefixeTable . 'typetags` (
   `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `color` varchar(255) NOT NULL,
@@ -24,28 +34,29 @@ CREATE TABLE `'. $prefixeTable .'typetags` (
 ) DEFAULT CHARSET=utf8
 ;';
     pwg_query($query);
-  }
-  
-  conf_update_param('TypeTags', serialize(array('show_all'=>true)));
-}
 
-function plugin_activate()
-{
-  global $conf;
-  
-  if (!isset($conf['TypeTags']))
+    $this->installed = true;
+  }
+
+  function activate($plugin_version, &$errors=array())
   {
-    conf_update_param('TypeTags', serialize(array('show_all'=>true)));
+    if (!$this->installed)
+    {
+      $this->install($plugin_version, $errors);
+    }
+  }
+
+  function deactivate()
+  {
+  }
+
+  function uninstall()
+  {
+    global $prefixeTable;
+
+    conf_delete_param('TypeTags');
+
+    pwg_query('ALTER TABLE `' . TAGS_TABLE . '` DROP `id_typetags`');
+    pwg_query('DROP TABLE `' . $prefixeTable . 'typetags`;');
   }
 }
-
-function plugin_uninstall()
-{
-  global $prefixeTable;
-
-  pwg_query('ALTER TABLE '.TAGS_TABLE.' DROP COLUMN `id_typetags`');
-  pwg_query('DROP TABLE '. $prefixeTable .'typetags;');
-  pwg_query('DELETE FROM '.CONFIG_TABLE.' WHERE param = "TypeTags" LIMIT 1;');
-}
-
-?>

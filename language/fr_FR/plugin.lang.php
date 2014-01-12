@@ -1,32 +1,22 @@
 <?php
 
-/* section */
-$lang['Create a Typetag'] = 'Créer un TypeTag';
-$lang['Edit typetag'] = 'Editer le TypeTag';
-$lang['Edit and associate TypeTags'] = 'Editer et associer les TypeTags';
-
-/* fields */
-$lang['Edited TypeTag'] = 'TypeTag édité';
-$lang['New color'] = 'Nouvelle couleur';
-$lang['New TypeTag'] = 'Nom du TypeTag';
-$lang['New name'] = 'Nouveau nom';
-$lang['Color TypeTag'] = 'Couleur du TypeTag';
-$lang['Not associated'] = 'Non associés';
+$lang['Add a new color'] = 'Ajouter une nouvelle couleur';
+$lang['Apply the same color to all tags'] = 'Appliquer la même couleur à tous les tags';
+$lang['Color'] = 'Couleur';
+$lang['Color added'] = 'Couleur ajoutée';
+$lang['Color deleted'] = 'Couleur supprimée';
+$lang['Color saved'] = 'Couleur sauvegardée';
+$lang['Edit color'] = 'Editer une couleur';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Allez sur <a href="%s">Photos/Tags</a> pour gérer les associations.';
+$lang['Invalid color'] = 'Couleur invalide';
+$lang['Manage colors'] = 'Gérer les couleurs';
+$lang['This name is already used'] = 'The nom est déjà utilisé';
+$lang['Set a different color for each tag'] = 'Appliquer une couleur différente à chaque tag';
+$lang['Set tags color'] = 'Changer la couleur des tags';
 $lang['Display colored tags'] = 'Afficher les tags colorés';
-$lang['Only on tags page'] = 'Seulement sur la page des tags';
+$lang['Only on tags page'] = 'Uniquement sur la liste des tags';
 $lang['Everywhere'] = 'Partout';
-
-/* buttons */
-$lang['Modify'] = 'Modifier';
-$lang['Delete all associations'] = 'Supprimer toutes les associations';
-
-/* messages */
-$lang['typetag_already_exists'] = 'Ce TypeTag existe déjà';
-$lang['typetag_saved'] = 'TypeTag enregistré';
-$lang['typetag_suppr'] = 'TypeTag supprimé';
-$lang['typetag_unknown'] = 'TypeTag inconnu';
-$lang['typetag_error'] = 'Vous devez renseigner tous les champs (nom et couleur)';
-$lang['All associations have been removed'] = 'Tous les associations ont été supprimées';
-$lang['typetags_associated'] = 'TypeTags associés';
+$lang['New color'] = 'Nouvelle couleur';
+$lang['You must fill all fields (name and color)'] = 'Vous devez remplir tous les champs (nom et couleur)';
 
 ?>
