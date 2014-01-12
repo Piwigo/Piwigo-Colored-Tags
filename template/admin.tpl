@@ -8,7 +8,7 @@ jQuery('#colorpicker').farbtastic('#hexval');
 {/footer_script}
 
 <div class="titrePage">
-  <h2>Coloured Keywords</h2>
+  <h2>Colored Tags</h2>
 </div>
 
 <form action="{$F_ACTION}" method="post" name="form">

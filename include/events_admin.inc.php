@@ -7,7 +7,7 @@ defined('TYPETAGS_PATH') or die('Hacking attempt!');
 function typetags_admin_menu($menu)
 {
   $menu[] = array(
-    'NAME' => 'Coloured Keywords',
+    'NAME' => 'Colored Tags',
     'URL' => TYPETAGS_ADMIN,
     );
   return $menu;

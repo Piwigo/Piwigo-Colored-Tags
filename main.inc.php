@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Coloured Keywords (TypeT@gs)
+Plugin Name: Colored Tags (TypeT@gs)
 Version: auto
 Description: Allow to manage color of tags, as you want...
 Plugin URI: auto
