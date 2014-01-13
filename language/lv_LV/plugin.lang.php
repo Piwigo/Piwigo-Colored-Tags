@@ -1,32 +1,29 @@
 <?php
 
 /* section */
-$lang['Create a Typetag'] = 'Izveidot TypeTag';
-$lang['Edit typetag'] = 'Rediģēt TypeTag';
 
 /* fields */
-$lang['Edited TypeTag'] = 'Rediģētais TypeTags';
 $lang['New color'] = 'Jauna krāsa';
-$lang['New TypeTag'] = 'TypeTag nosaukums';
-$lang['New name'] = 'Jauns vārds';
-$lang['Color TypeTag'] = 'TypeTag krāsa';
 
 /* buttons */
-$lang['Modify'] = 'Modificēt';
-$lang['Delete all associations'] = 'Delete all associations';
 
 /* messages */
-$lang['typetag_already_exists'] = 'Šis TypeTag jau eksistē';
-$lang['typetag_saved'] = 'TypeTag saglabāts';
-$lang['typetag_suppr'] = 'TypeTag dzēsti';
-$lang['typetag_unknown'] = 'Unknown TypeTag';
 $lang['You must fill all fields (name and color)'] = 'Jums jāinformē visus laukus (nosaukums un krāsa)';
-$lang['All associations have been removed'] = 'All associations have been removed';
-$lang['typetags_associated'] = 'TypeTags sasaistīts';
 
-$lang['Display colored tags'] = 'Attēlot krāsu Tegus';
-$lang['Edit and associate TypeTags'] = 'Rediģēt un sasaistīt TypeTagus';
+$lang['Display colored tags'] = 'Attēlot krāsainos Tegus (iezīmes)';
 $lang['Everywhere'] = 'Jebkur';
-$lang['Not associated'] = 'Nepiesaistīts';
 $lang['Only on tags page'] = 'Tikai tegu lapā';
+$lang['Apply the same color to all tags'] = 'Pielietot vienu un to pašu krāsu visām iezīmēm';
+$lang['Set a different color for each tag'] = 'Iestatīt atšķirīgu krāsu katrai iezīmei';
+$lang['Set tags color'] = 'Iestatīt iezīmes (tega) krāsu';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Iet uz <a href="%s">Photos/Tags</a> lai pārvaldītu asociācijas.';
+$lang['This name is already used'] = 'Šis nosaukums jau ir lietošanā';
+$lang['Add a new color'] = 'Pievienot jaunu krāsu';
+$lang['Manage colors'] = 'Pārvaldīt krāsas';
+$lang['Invalid color'] = 'Kļūdaina krāsa';
+$lang['Edit color'] = 'Rediģēt krāsu';
+$lang['Color saved'] = 'Krāsa saglabāta';
+$lang['Color deleted'] = 'Krāsa dzēsta';
+$lang['Color added'] = 'Krāsa ir pievienota';
+$lang['Color'] = 'Krāsa';
 ?>
