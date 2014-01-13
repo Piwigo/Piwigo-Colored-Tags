@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Все связи удалены';
-$lang['Color TypeTag'] = 'Цвет типа тегов';
-$lang['Create a Typetag'] = 'Создать тип тегов';
-$lang['Delete all associations'] = 'Удалить все связи';
-$lang['Edit typetag'] = 'Редактировать тип тегов';
-$lang['Edited TypeTag'] = 'Тип тега изменен';
-$lang['Modify'] = 'Изменить';
-$lang['New TypeTag'] = 'Название типа тегов';
 $lang['New color'] = 'Новый цвет';
-$lang['New name'] = 'Новое название';
-$lang['typetag_already_exists'] = 'Этот тип тегов уже есть';
 $lang['You must fill all fields (name and color)'] = 'Нужно заполнить все поля (название и цвет)';
-$lang['typetag_saved'] = 'Тип тегов сохранен';
-$lang['typetag_suppr'] = 'Тип тегов удален';
-$lang['typetag_unknown'] = 'Неизвестный тип тегов';
-$lang['typetags_associated'] = 'Связи тегов с типами тегов';
 $lang['Display colored tags'] = 'Показать раскрашенные теги';
-$lang['Edit and associate TypeTags'] = 'Редактировать связи TypeTags';
 $lang['Everywhere'] = 'Везде';
-$lang['Not associated'] = 'Не связанные';
 $lang['Only on tags page'] = 'Только на странице тегов';
+$lang['Add a new color'] = 'Добавить новый цвет';
+$lang['Apply the same color to all tags'] = 'Применить тот же цвет ко всем тэгам';
+$lang['Color'] = 'Цвет';
+$lang['Color added'] = 'Цвет добавлен';
+$lang['Color deleted'] = 'Цвет удален';
+$lang['Color saved'] = 'Цвет сохранен';
+$lang['Edit color'] = 'Редактирование цвета';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Перейдите в раздел <a href="%s">Изображения/Тэги</a> для управления ассоциациями';
+$lang['Invalid color'] = 'Неправильный цвет';
+$lang['Manage colors'] = 'Управление цветами';
+$lang['Set a different color for each tag'] = 'Установить разные цвета для каждого тэга';
+$lang['Set tags color'] = 'Установка цвета тэгов';
+$lang['This name is already used'] = 'Это название уже используется';
 ?>
