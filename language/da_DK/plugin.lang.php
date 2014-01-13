@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['typetags_associated'] = 'TypeTag tilknyttet';
-$lang['All associations have been removed'] = 'Alle tilknytninger er fjernet';
-$lang['Color TypeTag'] = 'TypeTag-farve';
-$lang['Create a Typetag'] = 'Opret et TypeTag';
-$lang['Delete all associations'] = 'Slet alle tilknytninger';
 $lang['Display colored tags'] = 'Vis farvede tags';
-$lang['Edit and associate TypeTags'] = 'Rediger og tilknyt TypeTags';
-$lang['Edit typetag'] = 'Rediger TypeTag';
-$lang['Edited TypeTag'] = 'TypeTag redigeret';
 $lang['Everywhere'] = 'Overalt';
-$lang['Modify'] = 'Rediger';
-$lang['New TypeTag'] = 'TypeTag-navn';
 $lang['New color'] = 'Ny farve';
-$lang['New name'] = 'Nyt navn';
-$lang['Not associated'] = 'Ikke tilknyttet';
 $lang['Only on tags page'] = 'Kun på tagside';
-$lang['typetag_already_exists'] = 'Dette TypeTag findes allerede';
 $lang['You must fill all fields (name and color)'] = 'Du skal udfylde alle felter (navn og farve)';
-$lang['typetag_saved'] = 'TypeTag gemt';
-$lang['typetag_suppr'] = 'TypeTag slettet';
-$lang['typetag_unknown'] = 'Ukendt TypeTag';
+$lang['Add a new color'] = 'Tilføj en ny farve';
+$lang['Apply the same color to all tags'] = 'Benyt den samme farve på alle tags';
+$lang['Color'] = 'Farve';
+$lang['Color added'] = 'Farve tilføjet';
+$lang['Color deleted'] = 'Farve slettet';
+$lang['Color saved'] = 'Farve gemt';
+$lang['Edit color'] = 'Rediger farve';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Gå til <a href="%s">Fotografier/Tags</a> for at håndtere tilknytninger.';
+$lang['Invalid color'] = 'Ugyldig farve';
+$lang['Manage colors'] = 'Håndtering af farver';
+$lang['Set a different color for each tag'] = 'Opsæt forskellige farver til hvert tag';
+$lang['Set tags color'] = 'Opsæt tagfarve';
+$lang['This name is already used'] = 'Navnet er allerede i brug';
 ?>
