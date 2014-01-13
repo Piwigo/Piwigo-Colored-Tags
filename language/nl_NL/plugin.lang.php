@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Alle toekenningen zijn verwijderd';
-$lang['Color TypeTag'] = 'TypeTag kleur';
-$lang['Create a Typetag'] = 'Maak een TypeTag';
-$lang['Delete all associations'] = 'Verwijder alle toekenningen';
-$lang['Edit typetag'] = 'Wijzig TypeTag';
-$lang['Edited TypeTag'] = 'TypeTag gewijzigd';
-$lang['Modify'] = 'Wijzig';
-$lang['New TypeTag'] = 'TypeTag naam';
 $lang['New color'] = 'Nieuwe kleur';
-$lang['New name'] = 'Nieuwe naam';
-$lang['typetag_already_exists'] = 'Deze TypeTag bestaat al';
-$lang['You must fill all fields (name and color)'] = 'Je moet alle velden invullen (naam en kleur)';
-$lang['typetag_saved'] = 'TypeTag opgeslagen';
-$lang['typetag_suppr'] = 'TypeTag verwijderd';
-$lang['typetag_unknown'] = 'Onbekende TypeTag';
-$lang['typetags_associated'] = 'TypeTags toegekend';
-$lang['Display colored tags'] = 'Toon gekleurde tags';
-$lang['Edit and associate TypeTags'] = 'Bewerk en associeer tags';
+$lang['You must fill all fields (name and color)'] = 'U dient alle velden in te vullen (naam en kleur)';
+$lang['Display colored tags'] = 'Toon gekleurde labels';
 $lang['Everywhere'] = 'Overal';
-$lang['Not associated'] = 'Niet gekoppeld';
-$lang['Only on tags page'] = 'Alleen op tags pagina';
+$lang['Only on tags page'] = 'Alleen op de labels-pagina';
+$lang['Add a new color'] = 'Voeg een nieuwe kleur toe';
+$lang['Apply the same color to all tags'] = 'Geef alle labels dezelfde kleur';
+$lang['Color'] = 'Kleur';
+$lang['Color added'] = 'Kleur toegevoegd';
+$lang['Color deleted'] = 'Kleur verwijderd';
+$lang['Color saved'] = 'Kleur opgeslagen';
+$lang['Edit color'] = 'Wijzig kleur';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Ga naar <a href="%s">Foto\'s/Labels</a> om de verbindingen te beheren.';
+$lang['Invalid color'] = 'Ongeldige kleur';
+$lang['Manage colors'] = 'Beheer kleuren';
+$lang['Set a different color for each tag'] = 'Geef ieder label een andere kleur';
+$lang['Set tags color'] = 'Stel de label-kleur in';
+$lang['This name is already used'] = 'Deze naam wordt reeds gebruikt';
 ?>

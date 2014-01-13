@@ -1,1 +1,1 @@
-Maakt het mogelijk om kleuren van tags te wijzigen.
+Maakt het mogelijk bepaalde labels te koppelen aan een kleur.
