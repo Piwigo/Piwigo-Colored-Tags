@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Usunięto wszystkie powiązania';
-$lang['Color TypeTag'] = 'Kolor TypeTag';
-$lang['Create a Typetag'] = 'Stwórz TypeTag';
-$lang['Delete all associations'] = 'Skasuj wszystkie powiązania';
-$lang['Edit typetag'] = 'Edytuj TypeTag';
-$lang['Edited TypeTag'] = 'Zmieniono TypeTag';
-$lang['Modify'] = 'Zmień';
 $lang['New color'] = 'Nowy kolor';
-$lang['New name'] = 'Nowa nazwa';
-$lang['New TypeTag'] = 'Nazwa TypeTag';
-$lang['typetags_associated'] = 'Powiązano TypeTag';
-$lang['typetag_already_exists'] = 'Ten TypeTag już istnieje';
 $lang['You must fill all fields (name and color)'] = 'Należy uzupełnić wszystkie pola (nazwę i kolor)';
-$lang['typetag_saved'] = 'Zapisano TypeTag';
-$lang['typetag_suppr'] = 'Skasowano TypeTag';
-$lang['typetag_unknown'] = 'Nieznany TypeTag';
 $lang['Display colored tags'] = 'Wyświetl kolorowe etykiety';
-$lang['Edit and associate TypeTags'] = 'Edycja i powiązania TypeTags';
 $lang['Everywhere'] = 'Wszędzie';
-$lang['Not associated'] = 'Nie powiązany';
 $lang['Only on tags page'] = 'Tylko na stronie etykiet';
+$lang['Add a new color'] = 'Dodaj nowy kolor';
+$lang['Apply the same color to all tags'] = 'Zastosuj ten sam kolor do wszystkich tagów';
+$lang['Color'] = 'Kolor';
+$lang['Color added'] = 'Kolor został dodany';
+$lang['Color deleted'] = 'Kolor został usunięty';
+$lang['Color saved'] = 'Kolor został zapisany';
+$lang['Edit color'] = 'Edytuj kolor';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Idź do <a href="%s">Zdjęcia/Tagi</a> by zarządzać powiązaniami.';
+$lang['Invalid color'] = 'Nieprawidłowy kolor';
+$lang['Manage colors'] = 'Zarządzaj kolorami';
+$lang['Set a different color for each tag'] = 'Ustaw różny kolor dla każdego tagu';
+$lang['Set tags color'] = 'Ustaw kolor tagów';
+$lang['This name is already used'] = 'Ta nazwa jest już używana';
 ?>
