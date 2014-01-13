@@ -1,32 +1,29 @@
 <?php
 
 /* section */
-$lang['Create a Typetag'] = 'Einen TypeTag erstellen';
-$lang['Edit typetag'] = 'TypeTag bearbeiten';
 
 /* fields */
-$lang['Edited TypeTag'] = 'TypeTag bearbeiten';
 $lang['New color'] = 'Neue Farbe';
-$lang['New TypeTag'] = 'Name de TypeTag';
-$lang['New name'] = 'Neuer Name';
-$lang['Color TypeTag'] = 'Farbe de TypeTag';
 
 /* buttons */
-$lang['Modify'] = 'Modifizieren';
-$lang['Delete all associations'] = 'Delete all associations';
 
 /* messages */
-$lang['typetag_already_exists'] = 'Dieser TypeTag existiert bereits';
-$lang['typetag_saved'] = 'TypeTag gespeichert';
-$lang['typetag_suppr'] = 'TypeTag gelöscht';
-$lang['typetag_unknown'] = 'Unknown TypeTag';
 $lang['You must fill all fields (name and color)'] = 'Alle Felder müssen ausgefüllt werden (Name und Farbe)';
-$lang['All associations have been removed'] = 'All associations have been removed';
-$lang['typetags_associated'] = 'TypeTags wurde assoziiert';
 
 $lang['Display colored tags'] = 'Zeige farbige Tags';
-$lang['Edit and associate TypeTags'] = 'Editieren und zuordnen der Tags Typen';
 $lang['Everywhere'] = 'Überall';
-$lang['Not associated'] = 'Nicht zugeordnet';
 $lang['Only on tags page'] = 'Nur auf Tags Seiten';
+$lang['Add a new color'] = 'Eine neue Farbe hinzufügen';
+$lang['Apply the same color to all tags'] = 'Dieselbe Farbe auf alle Tags anwenden';
+$lang['Color'] = 'Farbe';
+$lang['Color added'] = 'Farbe hinzugefügt';
+$lang['Color deleted'] = 'Farbe entfernt';
+$lang['Color saved'] = 'Farbe gespeichert';
+$lang['Edit color'] = 'Farbe editieren';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Besuche <a href="%s">Photos/Tags</a>, um Zuweisungen zu verwalten.';
+$lang['Invalid color'] = 'Ungültige Farbe';
+$lang['Manage colors'] = 'Farben verwalten';
+$lang['Set a different color for each tag'] = 'Setze eine unterschiedliche Farbe für jeden Tag';
+$lang['Set tags color'] = 'Setze Tag-farben';
+$lang['This name is already used'] = 'Dieser Name ist bereits in Verwendung';
 ?>
