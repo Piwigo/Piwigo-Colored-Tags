@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Tüm eşleştirmeler kaldırıldı';
-$lang['Color TypeTag'] = 'TypeTag rengi';
-$lang['Create a Typetag'] = 'TypeTag yarat';
-$lang['Delete all associations'] = 'Tüm eşleştirmeleri sil';
 $lang['Display colored tags'] = 'Renklendirilmiş etiketleri görüntüle';
-$lang['Edit and associate TypeTags'] = 'TypeTag düzenle ve eşleştir';
-$lang['Edit typetag'] = 'TypeTag düzenle';
-$lang['Edited TypeTag'] = 'TypeTag düzenlendi';
 $lang['Everywhere'] = 'Her yerde';
-$lang['Modify'] = 'Değiştir';
-$lang['New TypeTag'] = 'TypeTag ismi';
 $lang['New color'] = 'Yeni renk';
-$lang['New name'] = 'Yeni isim';
-$lang['Not associated'] = 'Eşleştirilmedi';
 $lang['Only on tags page'] = 'Sadece bir etiket sayfası';
-$lang['typetag_already_exists'] = 'Bu TypeTag zaten var';
 $lang['You must fill all fields (name and color)'] = 'Tüm alanları doldurmalısınız (isim ve renk)';
-$lang['typetag_saved'] = 'TypeTag kaydedildi';
-$lang['typetag_suppr'] = 'TypeTag silindi';
-$lang['typetag_unknown'] = 'Bilinmeyen TypeTag';
-$lang['typetags_associated'] = 'TypeTag eşleştirildi';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'İlişkilendirmeyi yönetmek için <a href="%s">Fotoğraflar/Etiketler</a> \'e gidin.';
+$lang['Add a new color'] = 'Yeni bir renk ekle';
+$lang['Apply the same color to all tags'] = 'Aynı rengi tüm etiketlere uygula';
+$lang['Color'] = 'Renk';
+$lang['Color added'] = 'Renk eklendi';
+$lang['Color deleted'] = 'Renk silindi';
+$lang['Color saved'] = 'Renk kaydedildi';
+$lang['Edit color'] = 'Rengi düzenle';
+$lang['Invalid color'] = 'Geçersiz renk';
+$lang['Manage colors'] = 'Renkleri yönet';
+$lang['Set a different color for each tag'] = 'Her etiket için değişik renk belirle';
+$lang['Set tags color'] = 'Etiket rengini belirle';
+$lang['This name is already used'] = 'Bu isim zaten kullanılmakta';
 ?>
