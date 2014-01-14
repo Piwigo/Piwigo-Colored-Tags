@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['typetags_associated'] = 'TipoEtiqueta associada';
-$lang['All associations have been removed'] = 'Todas as associações foram removidos';
-$lang['Color TypeTag'] = 'Cor da TipoEtiqueta';
-$lang['Create a Typetag'] = 'Criar TipoEtiqueta';
-$lang['Delete all associations'] = 'Eliminar todas as associações';
 $lang['Display colored tags'] = 'Exibir etiquetas coloridas';
-$lang['Edit and associate TypeTags'] = 'Editar e associar TipoEtiqueta';
-$lang['Edit typetag'] = 'Editar TipoEtiqueta';
-$lang['Edited TypeTag'] = 'TipoEtiqueta editada';
 $lang['Everywhere'] = 'Em toda parte';
-$lang['Modify'] = 'Modificar';
-$lang['New TypeTag'] = 'Nome da TipoEtiqueta';
 $lang['New color'] = 'Nova cor';
-$lang['New name'] = 'Novo nome';
-$lang['Not associated'] = 'Não está associado';
 $lang['Only on tags page'] = 'Somente na página etiquetas';
-$lang['typetag_already_exists'] = 'Este TipoEtiqueta já existe';
 $lang['You must fill all fields (name and color)'] = 'Você deve preencher todos os campos (nome e cor)';
-$lang['typetag_saved'] = 'TipoEtiqueta salvo';
-$lang['typetag_suppr'] = 'TipoEtiqueta eliminado';
-$lang['typetag_unknown'] = 'TipoEtiqueta desconhecido';
+$lang['Add a new color'] = 'Adicionar nova cor';
+$lang['Apply the same color to all tags'] = 'Aplicar a mesma cor em todas as etiquetas';
+$lang['Color'] = 'Cor';
+$lang['Color added'] = 'Cor adicionada';
+$lang['Color deleted'] = 'Cor eliminada';
+$lang['Color saved'] = 'Cor salva';
+$lang['Edit color'] = 'Aditar cor';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Ir para <a href="%s">Photos/Tags</a> para gerenciar associações.';
+$lang['Invalid color'] = 'Cor inválida';
+$lang['Manage colors'] = 'Garenciar cores';
+$lang['Set a different color for each tag'] = 'Configurar diferentes cores para cada etiqueta';
+$lang['Set tags color'] = 'Configurar cor de etiquetas';
+$lang['This name is already used'] = 'Este nome já foi usado';
 ?>
