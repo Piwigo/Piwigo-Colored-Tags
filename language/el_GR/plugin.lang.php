@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Όλες οι διασυνδέσεις έχουν αφαιρεθεί';
-$lang['Color TypeTag'] = 'TypeTag χρώμα';
-$lang['Create a Typetag'] = 'Δημιουργία TypeTag';
-$lang['Delete all associations'] = 'Διαγραφή όλων των διασυνδέσεων';
 $lang['Display colored tags'] = 'Εμφάνιση χρωματισμένες ετικέττες';
-$lang['Edit and associate TypeTags'] = 'Επεξεργασία και διασύνδεση TypeTags';
-$lang['Edit typetag'] = 'Επεξεργασία TypeTag';
-$lang['Edited TypeTag'] = 'TypeTag επεξεργάστηκε ';
 $lang['Everywhere'] = 'Παντού';
-$lang['Modify'] = 'Τροποποίηση';
-$lang['New TypeTag'] = 'TypeTag όνομα';
 $lang['New color'] = 'Νέο χρώμα';
-$lang['New name'] = 'Νέο όνομα';
-$lang['Not associated'] = 'Δεν συσχετίζεται';
 $lang['Only on tags page'] = 'Μόνο στη σελίδα ετικετών';
-$lang['typetag_already_exists'] = 'Αυτό το TypeTag υπάρχει ήδη ';
 $lang['You must fill all fields (name and color)'] = 'Θα πρέπει να συμπληρώσετε όλα τα πεδία (όνομα και το χρώμα)';
-$lang['typetag_saved'] = 'TypeTag αποθηκεύτηκε ';
-$lang['typetag_suppr'] = 'TypeTag διεγράφη';
-$lang['typetag_unknown'] = 'Άγνωστο TypeTag';
-$lang['typetags_associated'] = 'TypeTags συνδέθηκαν';
+$lang['This name is already used'] = 'Αυτό το όνομα χρησιμοποιείται ήδη';
+$lang['Set tags color'] = 'Ορίστε το χρώμα ετικετών';
+$lang['Set a different color for each tag'] = 'Ορίστε ένα διαφορετικό χρώμα για κάθε ετικέτα';
+$lang['Manage colors'] = 'Διαχειριστείτε τα χρώματα';
+$lang['Invalid color'] = 'Μη έγκυρο χρώμα';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Πηγαίνετε στο <a href="%s">Φωτογραφίες / Ετικέτες</a> για τη διαχείριση των σχέσεων.';
+$lang['Edit color'] = 'Επεξεργασία χρώματος';
+$lang['Color saved'] = 'Το χρώμα αποθηκεύτηκε ';
+$lang['Color deleted'] = 'Το χρώμα διαγράφτηκε';
+$lang['Color added'] = 'Το χρώμα προστέθηκε';
+$lang['Color'] = 'Χρώμα';
+$lang['Apply the same color to all tags'] = 'Εφαρμόστε το ίδιο χρώμα σε όλες τις ετικέτες';
+$lang['Add a new color'] = 'Προσθέστε ένα νέο χρώμα';
 ?>
