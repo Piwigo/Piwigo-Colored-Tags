@@ -38,6 +38,9 @@ if ($conf['TypeTags']['show_all'] and script_basename() != 'tags')
 // tags on tags page
 add_event_handler('loc_end_tags', 'typetags_tags');
 
+// escape keywords meta
+add_event_handler('loc_begin_page_header', 'typetags_escape');
+
 
 if (defined('IN_ADMIN'))
 {

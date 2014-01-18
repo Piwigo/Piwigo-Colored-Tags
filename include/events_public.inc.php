@@ -185,3 +185,15 @@ SELECT
     $template->assign('tags', $tags);
   }
 }
+
+function typetags_escape()
+{
+  global $template;
+  $template->set_prefilter('header', 'typetags_escape_prefilter');
+}
+function typetags_escape_prefilter($content)
+{
+  $search = '{$tag.name}';
+  $replace = '{$tag.name|strip_tags}';
+  return str_replace($search, $replace, $content);
+}
