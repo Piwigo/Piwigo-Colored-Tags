@@ -20,25 +20,22 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Összes társítás törölve';
-$lang['Color TypeTag'] = 'Címke típus szín';
-$lang['Create a Typetag'] = 'Címke típus létrehozása';
-$lang['Delete all associations'] = 'Összes társítás törlése';
 $lang['Display colored tags'] = 'Színes címkék megjelenítése';
-$lang['Edit and associate TypeTags'] = 'Címke típus módosítás és társítás';
-$lang['Edit typetag'] = 'Címke típus módosítás';
-$lang['Edited TypeTag'] = 'Módosítandó címke típus';
 $lang['Everywhere'] = 'Mindenütt';
-$lang['Modify'] = 'Módosítás';
-$lang['New TypeTag'] = 'Címke típus neve';
 $lang['New color'] = 'Új szín';
-$lang['New name'] = 'Új név';
-$lang['Not associated'] = 'Nem társított';
 $lang['Only on tags page'] = 'Csak a címkék oldalon';
-$lang['typetag_already_exists'] = 'Ilyes címke típus már létezik';
 $lang['You must fill all fields (name and color)'] = 'Ki kel tölteni a mezőket (név és szín)';
-$lang['typetag_saved'] = 'Címke típus mentve';
-$lang['typetag_suppr'] = 'Címke típus törölve';
-$lang['typetag_unknown'] = 'Ismeretlen címke típus';
-$lang['typetags_associated'] = 'Címke típusok társítva';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Ugrás a <a href="%s">Képek/Címkék</a> társítás kezeséséhez.';
+$lang['This name is already used'] = 'Ez a név már használatban van';
+$lang['Add a new color'] = 'Új szín hozzáadása';
+$lang['Set tags color'] = 'Címkék színének beállítása';
+$lang['Apply the same color to all tags'] = 'Egyazon szín az összes címkéhez';
+$lang['Set a different color for each tag'] = 'Különböző szín az egyes címkékhez';
+$lang['Color'] = 'Szín';
+$lang['Color added'] = 'Szín hozzáadva';
+$lang['Color deleted'] = 'Szín törölve';
+$lang['Color saved'] = 'Szín mentve';
+$lang['Edit color'] = 'Szín szerkesztése';
+$lang['Invalid color'] = 'Helytelen szín';
+$lang['Manage colors'] = 'Színek kezelése';
 ?>
