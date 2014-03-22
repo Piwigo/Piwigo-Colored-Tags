@@ -26,4 +26,15 @@ $lang['Everywhere'] = 'A tot arreu';
 $lang['Only on tags page'] = 'Només a la pàgina etiquetes';
 $lang['You must fill all fields (name and color)'] = 'Cal omplir tots els camps (nom i color)';
 $lang['Color'] = 'Color';
-?>
+$lang['Add a new color'] = 'Afegir un color nou';
+$lang['Apply the same color to all tags'] = 'Aplica el mateix color per a totes les etiquetes';
+$lang['Color added'] = 'El color s\'ha afegit';
+$lang['Color deleted'] = 'El color s\'ha eliminat';
+$lang['Color saved'] = 'El color s\'ha guardat';
+$lang['Edit color'] = 'Edita el color';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Ves a <a href="%s">Fotos/Etiquetes</a> per gestionar les associacions.';
+$lang['Invalid color'] = 'Color no valid';
+$lang['Manage colors'] = 'Gestiona els colors';
+$lang['Set a different color for each tag'] = 'Configura un color diferent per a cada etiqueta';
+$lang['Set tags color'] = 'Configura el color de les etiquetes';
+$lang['This name is already used'] = 'Aquest nom ja està en ús.';
