@@ -1,4 +1,3 @@
-<?php
 // +-----------------------------------------------------------------------+
 // | Piwigo - a PHP based photo gallery                                    |
 // +-----------------------------------------------------------------------+
@@ -31,3 +30,6 @@ $lang['Color saved'] = 'Konservita koloro';
 $lang['Color added'] = 'Aldonita koloro';
 $lang['Everywhere'] = 'Ĉie';
 $lang['Color'] = 'Koloro';
+$lang['Apply the same color to all tags'] = 'Apliki la saman koloron al ĉiuj etikedoj';
+$lang['Manage colors'] = 'Administri la kolorojn';
+$lang['Only on tags page'] = 'Nur sur la etikedopaĝo';
