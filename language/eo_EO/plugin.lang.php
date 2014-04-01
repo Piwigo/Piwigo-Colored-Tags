@@ -34,3 +34,7 @@ $lang['Color'] = 'Koloro';
 $lang['Apply the same color to all tags'] = 'Apliki la saman koloron al ĉiuj etikedoj';
 $lang['Manage colors'] = 'Administri la kolorojn';
 $lang['Only on tags page'] = 'Nur sur la etikedopaĝo';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Iri al <a href="%s">Fotoj/Etikedoj</a> por mastrumi la asocioj.';
+$lang['Set a different color for each tag'] = 'Apliki malsaman koloron al ĉiu etikedo';
+$lang['Set tags color'] = 'Ŝanĝi la etikedan koloron';
+$lang['You must fill all fields (name and color)'] = 'Vi devas kompletigi ĉiujn kampojn (nomo kaj koloro)';
