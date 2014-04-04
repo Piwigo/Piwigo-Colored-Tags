@@ -20,25 +20,21 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['Color TypeTag'] = 'Color de EtiquetaTipo';
-$lang['Create a Typetag'] = 'Crear EtiquetaTipo';
-$lang['Edit and associate TypeTags'] = 'Modificar e asociar EtiquetasTipo';
-$lang['Edit typetag'] = 'Modificar EtiquetaTipo';
-$lang['Edited TypeTag'] = 'Modificouse a EtiquetaTipo';
-$lang['New TypeTag'] = 'Nome da EtiquetaTipo';
-$lang['typetag_already_exists'] = 'Esta EtiquetaTipo xa existe';
-$lang['typetag_saved'] = 'Gardouse a EtiquetaTipo';
-$lang['typetag_suppr'] = 'Eliminouse a EtiquetaTipo';
-$lang['typetag_unknown'] = 'EtiquetaTipo descoñecida';
-$lang['typetags_associated'] = 'EtiquetasTipo asociadas';
 $lang['You must fill all fields (name and color)'] = 'Debes encher tódolos campos (nome e cor)';
-$lang['Delete all associations'] = 'Eliminar todas as asociacións';
 $lang['Display colored tags'] = 'Amosar as etiquetas coloreadas';
 $lang['Everywhere'] = 'Calquera sitio';
-$lang['Modify'] = 'Cambiar';
 $lang['New color'] = 'Nova cor';
-$lang['New name'] = 'Novo nome';
-$lang['Not associated'] = 'Non asociado';
 $lang['Only on tags page'] = 'Só nas páxinas das etiquetas';
-$lang['All associations have been removed'] = 'Elimináronse tódalas asociacións';
-?>
+$lang['Edit color'] = 'Modificar cor';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Ir a <a href="%s">Fotos/Etiquetas</a> para xestionar asociacións.';
+$lang['Invalid color'] = 'Cor non válida';
+$lang['Manage colors'] = 'Xestión de cores';
+$lang['Set a different color for each tag'] = 'Establecer unha cor diferente para cada etiqueta';
+$lang['Set tags color'] = 'Establecer etiquetas de cor';
+$lang['This name is already used'] = 'Este nome xa está en uso';
+$lang['Add a new color'] = 'Engadir unha nova cor';
+$lang['Apply the same color to all tags'] = 'Aplicar a mesma cor a tódalas etiquetas';
+$lang['Color'] = 'Cor';
+$lang['Color added'] = 'Cor engadida';
+$lang['Color deleted'] = 'Cor eliminada';
+$lang['Color saved'] = 'Cor gardada';
