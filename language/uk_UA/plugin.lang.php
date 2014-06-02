@@ -20,25 +20,21 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Всі асоціації були видалені';
-$lang['Color TypeTag'] = 'Колір TypeTag';
-$lang['Create a Typetag'] = 'Створити TypeTag';
-$lang['Delete all associations'] = 'Видалити всі асоціації';
-$lang['Edit typetag'] = 'Редагувати TypeTag';
-$lang['Edited TypeTag'] = 'TypeTags відредагований';
-$lang['Modify'] = 'Змінити';
 $lang['New color'] = 'Новий колір';
-$lang['New name'] = 'Нове ім\'я';
-$lang['New TypeTag'] = 'Ім\'я TypeTag';
-$lang['typetags_associated'] = 'TypeTags, пов\'язані';
-$lang['typetag_already_exists'] = 'Це TypeTag вже існує';
 $lang['You must fill all fields (name and color)'] = 'Ви повинні заповнити всі поля (ім\'я та колір)';
-$lang['typetag_saved'] = 'TypeTag збережено';
-$lang['typetag_suppr'] = 'TypeTag видалено';
-$lang['typetag_unknown'] = 'Невідомий TypeTag';
 $lang['Display colored tags'] = 'Показати кольорові теґи';
-$lang['Edit and associate TypeTags'] = 'Редагувати і асоціювати TypeTags';
 $lang['Everywhere'] = 'Скрізь';
-$lang['Not associated'] = 'Не асоційовано';
 $lang['Only on tags page'] = 'Лише на сторінці теґи';
-?>
+$lang['Add a new color'] = 'Додати новий колір';
+$lang['Apply the same color to all tags'] = 'Застосувати той же колір для всіх тегів';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Перейти до <a href="%s">Photos/Tags</a> за для управління асоціаціями.';
+$lang['Set a different color for each tag'] = 'Встановити різні кольори для кожного тега';
+$lang['Color'] = 'Колір';
+$lang['Color added'] = 'Додано колір';
+$lang['Color deleted'] = 'Колір вилучино';
+$lang['Color saved'] = 'Колір збережено';
+$lang['Edit color'] = 'Редагувати колір';
+$lang['Invalid color'] = 'Неприпустимий колір';
+$lang['Manage colors'] = 'Управління кольорами';
+$lang['Set tags color'] = 'Встановити тег кольору';
+$lang['This name is already used'] = 'Це ім’я вже використовується';
