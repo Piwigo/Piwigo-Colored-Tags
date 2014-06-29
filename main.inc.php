@@ -11,17 +11,16 @@ defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
 global $prefixeTable, $conf;
 
-define('TYPETAGS_ID',      basename(dirname(__FILE__)));
-define('TYPETAGS_PATH' ,   PHPWG_PLUGINS_PATH . TYPETAGS_ID . '/');
-define('TYPETAGS_TABLE' ,  $prefixeTable . 'typetags');
-define('TYPETAGS_ADMIN',   get_root_url().'admin.php?page=plugin-' . TYPETAGS_ID);
-define('TYPETAGS_VERSION', 'auto');
-
-
-$conf['TypeTags'] = unserialize($conf['TypeTags']);
-
+define('TYPETAGS_ID',     basename(dirname(__FILE__)));
+define('TYPETAGS_PATH' ,  PHPWG_PLUGINS_PATH . TYPETAGS_ID . '/');
+define('TYPETAGS_TABLE' , $prefixeTable . 'typetags');
+define('TYPETAGS_ADMIN',  get_root_url().'admin.php?page=plugin-' . TYPETAGS_ID);
 
 include_once(TYPETAGS_PATH . 'include/events_public.inc.php');
+
+
+$conf['TypeTags'] = safe_unserialize($conf['TypeTags']);
+
 
 // tags on picture page
 /*if (script_basename() == 'picture')

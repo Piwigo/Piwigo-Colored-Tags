@@ -148,7 +148,7 @@ if (isset($_POST['save_config']))
     'show_all' => $_POST['show_all'] == 'true',
     );
 
-  conf_update_param('TypeTags', serialize($conf['TypeTags']));
+  conf_update_param('TypeTags', $conf['TypeTags']);
   $page['infos'][] = l10n('Information data registered in database');
 }
 
