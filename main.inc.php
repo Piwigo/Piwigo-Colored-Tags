@@ -1,10 +1,11 @@
 <?php
 /*
-Plugin Name: Colored Tags (TypeT@gs)
+Plugin Name: Colored Tags
 Version: auto
 Description: Allow to manage color of tags, as you want...
 Plugin URI: auto
 Author: Mistic
+Author URI: http://www.strangeplanet.fr
 */
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
