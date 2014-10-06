@@ -1,32 +1,28 @@
 <?php
 
 /* section */
-$lang['Create a Typetag'] = 'Lag en TypeTag';
-$lang['Edit typetag'] = 'Rediger TypeTag';
 
 /* fields */
-$lang['Edited TypeTag'] = 'Rediger TypeTag';
 $lang['New color'] = 'Ny farge';
-$lang['New TypeTag'] = 'Navn på TypeTag';
-$lang['New name'] = 'Nytt navn';
-$lang['Color TypeTag'] = 'Farge på TypeTag';
 
 /* buttons */
-$lang['Modify'] = 'Endre';
-$lang['Delete all associations'] = 'Delete all associations';
 
 /* messages */
-$lang['typetag_already_exists'] = 'Denne TypeTag eksisterer allerede';
-$lang['typetag_saved'] = 'TypeTag lagre';
-$lang['typetag_suppr'] = 'TypeTag slettet';
-$lang['typetag_unknown'] = 'Unknown TypeTag';
 $lang['You must fill all fields (name and color)'] = 'Du må inkludere alle felter (navn og farge)';
-$lang['All associations have been removed'] = 'All associations have been removed';
-$lang['typetags_associated'] = 'TypeTags assossiert';
 
 $lang['Display colored tags'] = 'Vis farga tagger';
-$lang['Edit and associate TypeTags'] = 'Endre og forbinde Type Tags ';
 $lang['Everywhere'] = 'Overalt';
-$lang['Not associated'] = 'Ikke forbundet';
 $lang['Only on tags page'] = 'Bare på tagget side';
-?>
+$lang['Manage colors'] = 'Behandle farger';
+$lang['Set a different color for each tag'] = 'Lagre forskjellig farge for hver tags';
+$lang['Set tags color'] = 'Lagre tags farge';
+$lang['This name is already used'] = 'Dette navn er allerede valgt';
+$lang['Invalid color'] = 'Ugyldig farge';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Gå til <a href="%s">Bilde/Tags</a>';
+$lang['Edit color'] = 'Edit farge';
+$lang['Color saved'] = 'Farge lagret';
+$lang['Color deleted'] = 'Farge slettet';
+$lang['Color added'] = 'Farge lagt til';
+$lang['Color'] = 'Farge';
+$lang['Apply the same color to all tags'] = 'Tilføy samme farge til alle tags';
+$lang['Add a new color'] = 'Legg til en ny farge';
