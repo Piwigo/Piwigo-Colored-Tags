@@ -10,12 +10,22 @@ Author URI: http://www.strangeplanet.fr
 
 defined('PHPWG_ROOT_PATH') or die('Hacking attempt!');
 
+if (basename(dirname(__FILE__)) != 'typetags')
+{
+  add_event_handler('init', 'typetags_error');
+  function typetags_error()
+  {
+    global $page;
+    $page['errors'][] = 'Colored Tags folder name is incorrect, uninstall the plugin and rename it to "typetags"';
+  }
+  return;
+}
+
 global $prefixeTable, $conf;
 
-define('TYPETAGS_ID',     basename(dirname(__FILE__)));
-define('TYPETAGS_PATH' ,  PHPWG_PLUGINS_PATH . TYPETAGS_ID . '/');
+define('TYPETAGS_PATH' ,  PHPWG_PLUGINS_PATH . 'typetags/');
 define('TYPETAGS_TABLE' , $prefixeTable . 'typetags');
-define('TYPETAGS_ADMIN',  get_root_url().'admin.php?page=plugin-' . TYPETAGS_ID);
+define('TYPETAGS_ADMIN',  get_root_url().'admin.php?page=plugin-typetags');
 
 include_once(TYPETAGS_PATH . 'include/events_public.inc.php');
 
