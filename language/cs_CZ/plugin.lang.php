@@ -20,25 +20,21 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['All associations have been removed'] = 'Všechna přiřazení byla odstraněna';
-$lang['Delete all associations'] = 'Smazat všechna přiřazení';
-$lang['Modify'] = 'Změnit';
 $lang['New color'] = 'Nová barva';
-$lang['New name'] = 'Nový název';
 $lang['You must fill all fields (name and color)'] = 'Musíte vyplnit všechna pole (název a barva)';
-$lang['Color TypeTag'] = 'Barva TypeTagu';
-$lang['Create a Typetag'] = 'Vytvořit TypeTag';
-$lang['Edit typetag'] = 'Změnit TypeTag';
-$lang['Edited TypeTag'] = 'TypeTag změněn';
-$lang['New TypeTag'] = 'Název TypeTagu';
-$lang['typetag_already_exists'] = 'Tento TypeTag už existuje';
-$lang['typetag_saved'] = 'TypeTag uložen';
-$lang['typetag_suppr'] = 'TypeTag smazán';
-$lang['typetag_unknown'] = 'Neznámý TypeTag';
-$lang['typetags_associated'] = 'TypeTagy přiřazeny';
 $lang['Display colored tags'] = 'Zobrazení barevné visačky';
-$lang['Edit and associate TypeTags'] = 'Editace a spojení s TapeTags';
 $lang['Everywhere'] = 'Kdekoliv';
-$lang['Not associated'] = 'Nespojeno';
 $lang['Only on tags page'] = 'Pouze na stránce visaček/tagů';
-?>
+$lang['Add a new color'] = 'Přidat novou barvu';
+$lang['Apply the same color to all tags'] = 'Použít stejnou barvu na všechny štítky';
+$lang['Color'] = 'Barva';
+$lang['Color added'] = 'Barva přidána';
+$lang['Color deleted'] = 'Barva smazána';
+$lang['Color saved'] = 'Barva uložena';
+$lang['Edit color'] = 'Upravit barvu';
+$lang['Go to <a href="%s">Photos/Tags</a> to manage associations.'] = 'Pro správu propojení přejděte na <a href="%s">Fotografie/Štítky</a>.';
+$lang['Invalid color'] = 'Neplatná barva';
+$lang['Manage colors'] = 'Spravovat barvy';
+$lang['Set a different color for each tag'] = 'Nastavit různé barvy pro každý štítek';
+$lang['Set tags color'] = 'Nastavit barvu štítků';
+$lang['This name is already used'] = 'Tento název se již používá';
