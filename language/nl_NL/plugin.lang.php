@@ -21,7 +21,7 @@
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
 $lang['New color'] = 'Nieuwe kleur';
-$lang['You must fill all fields (name and color)'] = 'U dient alle velden in te vullen (naam en kleur)';
+$lang['You must fill all fields (name and color)'] = 'Je moet alle velden invullen (naam en kleur)';
 $lang['Display colored tags'] = 'Toon gekleurde labels';
 $lang['Everywhere'] = 'Overal';
 $lang['Only on tags page'] = 'Alleen op de labels-pagina';
@@ -38,4 +38,3 @@ $lang['Manage colors'] = 'Beheer kleuren';
 $lang['Set a different color for each tag'] = 'Geef ieder label een andere kleur';
 $lang['Set tags color'] = 'Stel de label-kleur in';
 $lang['This name is already used'] = 'Deze naam wordt reeds gebruikt';
-?>
