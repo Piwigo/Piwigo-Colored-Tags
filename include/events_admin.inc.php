@@ -122,22 +122,31 @@ SELECT
 ;';
   $template->assign('tags_color', query2array($query, 'id'));
 
+  $template->append(
+    'tag_manager_plugin_actions',
+    array(
+      'ID' => 'typetags',
+      'NAME' => l10n('Set tags color')
+      )
+    );
+
   $template->assign('TYPETAGS_PATH', TYPETAGS_PATH);
   $template->set_prefilter('tags', 'typetags_admin_prefilter');
 }
 
 function typetags_admin_prefilter($content)
 {
-  // add button
-  $search[0] = '<input type="submit" name="delete"';
-  $replace[0] = '<input type="submit" name="typetags" value="{\'Set tags color\'|translate}"> ' . $search[0];
-
   // add form part
-  $search[1] = '<form action="{$F_ACTION}" method="post">';
-  $replace[1] = $search[1] . file_get_contents(realpath(TYPETAGS_PATH . 'template/tags.tpl'));
+  $search[0] = '<form action="{$F_ACTION}" method="post">';
+  $replace[0] = $search[0] . file_get_contents(realpath(TYPETAGS_PATH . 'template/tags.tpl'));
+
+  // hide other parts of the page when editing tag colors
+  $search[1] = '!isset($MERGE_TAGS_LIST)';
+  $replace[1] = $search[1].' and !isset($TYPETAGS_LIST)';
 
   // color on main list
-  $search[2] = '<input type="checkbox" name="tags[]" value="{$tag.id}"> {$tag.name}';
+  $search[2] = '<input type="checkbox" name="tags[]" value="{$tag.id}">
+          {$tag.name}';
   $replace[2] = '<input type="checkbox" name="tags[]" value="{$tag.id}"> <span style="color:{$tags_color[$tag.id].color};">{$tag.name}</span>';
 
   return str_replace($search, $replace, $content);
