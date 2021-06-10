@@ -18,5 +18,6 @@ $lang['Only on tags page'] = 'Only on tags page';
 $lang['Everywhere'] = 'Everywhere';
 $lang['New color'] = 'New color';
 $lang['You must fill all fields (name and color)'] = 'You must fill all fields (name and color)';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Go to <a href="%s">plugin page</a> to edit colors';
 
 ?>
