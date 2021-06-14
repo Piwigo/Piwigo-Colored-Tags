@@ -17,6 +17,10 @@ async function updateTagsColor(tagIds) {
 // change color of one tag on the page
 async function updateTagColor(tagId) {
     let colorSample = $('.tag-box[data-id=' + tagId + '] .typetag-color-sample');
+
+    if (!(tagId in tagColor)) // if the tag just created
+        tagColor[tagId] = { id_typetags: null, color: null }; // create an entry in tagColor
+
     if (tagColor[tagId].id_typetags != null) {
         if (colorSample.length == 0) {
             colorSample = $('<span class="typetag-color-sample tiptip"></span>');

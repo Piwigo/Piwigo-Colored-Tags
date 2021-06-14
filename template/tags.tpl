@@ -10,7 +10,10 @@
 
   {/literal}
 
-  JSON.parse('{json_encode($typetags)}').forEach(el => typeOfTags[el.id] = el);
+  {if $typetags}
+    JSON.parse('{json_encode($typetags)}').forEach(el => typeOfTags[el.id] = el);  
+  {/if}
+
   const tagColor = {strip} JSON.parse('{json_encode($tags_color)}');{/strip}
 
   const str_name_used = "{'This name is already used'|translate|escape:javascript}";
