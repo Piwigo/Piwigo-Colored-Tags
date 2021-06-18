@@ -26,4 +26,4 @@ $lang['Manage colors'] = 'Správa farieb';
 $lang['Set a different color for each tag'] = 'Nastaviť odlišnú farbu pre každý tag';
 $lang['Set tags color'] = 'Nastaviť farbu tagov';
 $lang['This name is already used'] = 'Tento názov je už použitý';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Prejdite na <a href="%s"> stránku doplnku </a> a upravte farby';
