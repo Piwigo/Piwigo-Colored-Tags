@@ -22,9 +22,9 @@
 // +-----------------------------------------------------------------------+
 $lang['New color'] = 'Nowy kolor';
 $lang['You must fill all fields (name and color)'] = 'Należy uzupełnić wszystkie pola (nazwę i kolor)';
-$lang['Display colored tags'] = 'Wyświetl kolorowe etykiety';
+$lang['Display colored tags'] = 'Wyświetl kolorowe tagi';
 $lang['Everywhere'] = 'Wszędzie';
-$lang['Only on tags page'] = 'Tylko na stronie etykiet';
+$lang['Only on tags page'] = 'Tylko na stronie tagów';
 $lang['Add a new color'] = 'Dodaj nowy kolor';
 $lang['Apply the same color to all tags'] = 'Zastosuj ten sam kolor do wszystkich tagów';
 $lang['Color'] = 'Kolor';
@@ -38,4 +38,4 @@ $lang['Manage colors'] = 'Zarządzaj kolorami';
 $lang['Set a different color for each tag'] = 'Ustaw różny kolor dla każdego tagu';
 $lang['Set tags color'] = 'Ustaw kolor tagów';
 $lang['This name is already used'] = 'Ta nazwa jest już używana';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Przejdź do <a href="%s">strony wtyczki</a> aby edytować kolory';
