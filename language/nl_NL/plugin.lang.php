@@ -38,3 +38,6 @@ $lang['Manage colors'] = 'Beheer kleuren';
 $lang['Set a different color for each tag'] = 'Geef ieder label een andere kleur';
 $lang['Set tags color'] = 'Stel de label-kleur in';
 $lang['This name is already used'] = 'Deze naam wordt reeds gebruikt';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Wijzig de referentietaal in
+Engels [VK]
+Ga naar de <a href="%s">plug-inpagina</a> om kleuren te bewerken';
