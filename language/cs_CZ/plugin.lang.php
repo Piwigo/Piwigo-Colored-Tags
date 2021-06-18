@@ -38,3 +38,4 @@ $lang['Manage colors'] = 'Spravovat barvy';
 $lang['Set a different color for each tag'] = 'Nastavit různé barvy pro každý štítek';
 $lang['Set tags color'] = 'Nastavit barvu štítků';
 $lang['This name is already used'] = 'Tento název se již používá';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Přejděte na <a href="%s">stránku pluginu</a> pro úpravu barev';
