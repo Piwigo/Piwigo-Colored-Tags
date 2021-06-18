@@ -38,4 +38,4 @@ $lang['Manage colors'] = 'Управление цветами';
 $lang['Set a different color for each tag'] = 'Установить разные цвета для каждого тэга';
 $lang['Set tags color'] = 'Установка цвета тэгов';
 $lang['This name is already used'] = 'Это название уже используется';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Переход к <a href="%s">странице плагина</a> для редактирования цвета';
