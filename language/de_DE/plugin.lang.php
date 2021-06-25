@@ -26,3 +26,4 @@ $lang['Manage colors'] = 'Farben verwalten';
 $lang['Set a different color for each tag'] = 'Eine unterschiedliche Farbe für jedes Schlagwert festlegen';
 $lang['Set tags color'] = 'Schlagwort-Farben festlegen';
 $lang['This name is already used'] = 'Dieser Name wird bereits verwendet';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Gehen Sie zur <a href="%s">Plugin-Seite</a>, um Farben zu bearbeiten';
