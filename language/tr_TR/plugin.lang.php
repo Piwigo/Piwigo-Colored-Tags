@@ -38,4 +38,4 @@ $lang['Manage colors'] = 'Renkleri yönet';
 $lang['Set a different color for each tag'] = 'Her etiket için değişik renk belirle';
 $lang['Set tags color'] = 'Etiket rengini belirle';
 $lang['This name is already used'] = 'Bu isim zaten kullanılmakta';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Renkleri düzenlemek için <a href="%s">eklenti sayfası</a> \'na gidin';
