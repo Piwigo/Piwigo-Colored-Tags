@@ -38,4 +38,4 @@ $lang['Color saved'] = 'Szín mentve';
 $lang['Edit color'] = 'Szín szerkesztése';
 $lang['Invalid color'] = 'Helytelen szín';
 $lang['Manage colors'] = 'Színek kezelése';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Látogass el a <a href="%s">bővítmény oldalára</a> a színek beállításához';
