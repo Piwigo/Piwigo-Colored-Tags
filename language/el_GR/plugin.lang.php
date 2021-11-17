@@ -38,4 +38,4 @@ $lang['Color added'] = 'Το χρώμα προστέθηκε';
 $lang['Color'] = 'Χρώμα';
 $lang['Apply the same color to all tags'] = 'Εφαρμόστε το ίδιο χρώμα σε όλες τις ετικέτες';
 $lang['Add a new color'] = 'Προσθέστε ένα νέο χρώμα';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Μεταβείτε στη <a href="%s">plugin page</a> για να επεξεργαστείτε τα χρώματα';
