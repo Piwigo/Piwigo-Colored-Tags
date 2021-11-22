@@ -55,8 +55,6 @@ add_event_handler('loc_begin_page_header', 'typetags_escape');
 
 if (defined('IN_ADMIN'))
 {
-  add_event_handler('get_admin_plugin_menu_links', 'typetags_admin_menu');
-
   add_event_handler('loc_begin_admin_page', 'typetags_admin');
 
   include_once(TYPETAGS_PATH . 'include/events_admin.inc.php');

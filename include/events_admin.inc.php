@@ -2,18 +2,6 @@
 defined('TYPETAGS_PATH') or die('Hacking attempt!');
 
 /**
- * menu link
- */
-function typetags_admin_menu($menu)
-{
-  $menu[] = array(
-    'NAME' => 'Colored Tags',
-    'URL' => TYPETAGS_ADMIN,
-    );
-  return $menu;
-}
-
-/**
  * tags page
  */
 function typetags_admin()
