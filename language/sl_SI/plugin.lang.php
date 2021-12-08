@@ -38,3 +38,4 @@ $lang['Color saved'] = 'Barva shranjena';
 $lang['Display colored tags'] = 'Oznake prikaži v barvah';
 $lang['Edit color'] = 'Uredi barvo';
 $lang['Everywhere'] = 'Povsod';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Pojdite na <a href="%s">stran vtičnika</a> za urejanje barv ';
