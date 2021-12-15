@@ -38,3 +38,4 @@ $lang['Invalid color'] = 'Неприпустимий колір';
 $lang['Manage colors'] = 'Управління кольорами';
 $lang['Set tags color'] = 'Встановити тег кольору';
 $lang['This name is already used'] = 'Це ім’я вже використовується';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Прейти до <a href="%s">сторінки плагіну</a> для редагування кольорів';
