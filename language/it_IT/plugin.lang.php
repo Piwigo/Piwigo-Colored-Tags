@@ -26,4 +26,4 @@ $lang['Color'] = 'Colore';
 $lang['Color added'] = 'Colore aggiunto';
 $lang['Color deleted'] = 'Colore cancellato';
 $lang['Add a new color'] = 'Aggiungi nuovo colore';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Vai alla <a href="%s">pagina plugin</a> per modificare i colori';
