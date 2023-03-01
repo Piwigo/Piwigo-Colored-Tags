@@ -38,4 +38,4 @@ $lang['Manage colors'] = 'Administrar cores';
 $lang['Set a different color for each tag'] = 'Definir uma cor diferente para cada etiqueta';
 $lang['Set tags color'] = 'Definir cores para etiquetas';
 $lang['This name is already used'] = 'Este nome já está em uso';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Vá para extensão <a href="%s"> para editar cores';
