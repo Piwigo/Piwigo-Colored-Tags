@@ -38,3 +38,4 @@ $lang['Set a different color for each tag'] = 'Aseta eri väri jokaiselle tägil
 $lang['Set tags color'] = 'Aseta tägin väri';
 $lang['This name is already used'] = 'Nimi on jo käytössä';
 $lang['You must fill all fields (name and color)'] = 'Täytä kaikki kentät (nimi ja väri)';
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = 'Mene <a href="%s">lisäosan sivulle</a> muokataksesi värejä';
