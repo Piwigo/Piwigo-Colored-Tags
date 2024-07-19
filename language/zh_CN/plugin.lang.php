@@ -38,4 +38,4 @@ $lang['Manage colors'] = '管理颜色';
 $lang['Set a different color for each tag'] = '为每个标签设置独立的颜色';
 $lang['Set tags color'] = '设置标签颜色';
 $lang['This name is already used'] = '此名称已存在';
-?>
+$lang['Go to <a href="%s">plugin page</a> to edit colors'] = '前往<a href="%s">插件页面</a>编辑颜色';
