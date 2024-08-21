@@ -27,29 +27,40 @@ SELECT id, color
     $typetags_cache['colors'] = query2array($query, 'id', 'color');
   }
 
+  if (!isset($typetags_cache['color_of_tag']))
+  {
+    $typetags_cache['color_of_tag'] = array(
+      'by_id' => array(),
+      'by_name' => array(),
+    );
+
+    $query = '
+SELECT
+    t.id,
+    t.name,
+    color
+  FROM ' . TYPETAGS_TABLE . ' AS tt
+    INNER JOIN ' . TAGS_TABLE . ' AS t ON t.id_typetags = tt.id
+;';
+    $rows = query2array($query);
+    foreach ($rows as $row)
+    {
+      $typetags_cache['color_of_tag']['by_id'][ $row['id'] ] = $row['color'];
+      $typetags_cache['color_of_tag']['by_name'][ $row['name'] ] = $row['color'];
+    }
+  }
+
   if (!empty($tag['id_typetags']))
   {
     $color = $typetags_cache['colors'][ $tag['id_typetags'] ];
   }
+  elseif (isset($tag['id']))
+  {
+    $color = $typetags_cache['color_of_tag']['by_id'][ $tag['id'] ] ?? null;
+  }
   else
   {
-    if (isset($tag['id']))
-    {
-      $where = 't.id = ' . $tag['id'];
-    }
-    else
-    {
-      $where = 't.name = "' . pwg_db_real_escape_string($tag_name) . '"';
-    }
-
-    $query = '
-SELECT color
-  FROM ' . TYPETAGS_TABLE . ' AS tt
-    INNER JOIN ' . TAGS_TABLE . ' AS t
-    ON t.id_typetags = tt.id
-  WHERE ' . $where . '
-;';
-    list($color) = pwg_db_fetch_row(pwg_query($query));
+    $color = $typetags_cache['color_of_tag']['by_name'][ $tag_name ] ?? null;
   }
 
   if ($color === null)
